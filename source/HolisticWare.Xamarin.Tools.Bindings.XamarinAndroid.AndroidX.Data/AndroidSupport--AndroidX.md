@@ -20,6 +20,9 @@ mappings/google-readonly-1-baseline/androidx-artifact-mapping.csv
 mappings/google-readonly-1-baseline/androidx-class-mapping.csv
 ```
 
+
+
+
 [androidx-artifact-mapping.csv](mappings/google-readonly-1-baseline/androidx-artifact-mapping.csv)
 
 [androidx-class-mapping.csv](mappings/google-readonly-1-baseline/androidx-class-mapping.csv)
@@ -28,13 +31,35 @@ Number of mappings/rows:
 
 *   `google-readonly-2-baseline-prettyfied/androidx-artifact-mapping.csv`
 
-    N = 105
+    *       structure line included (1st line, header)
 
-    structure line included (1st line, header)
+    *   20190122 
+    
+        *   N = 105
+
+        *   size 8,061 bytes
+
+    *   20191220 
+    
+        *   N = 105
+
+        *   size 8,061 bytes
+
 
 *   'google-readonly-2-baseline-prettyfied/androidx-class-mapping.csv'
 
-    N = 1807
+    *   20190122 
+    
+        *   N = 105
+
+        *   size 184,696 bytes
+
+    *   20191220 
+    
+        *   N = 1938
+
+        *   size 170,678 bytes
+
 
     structure line included (1st line, header)
 
