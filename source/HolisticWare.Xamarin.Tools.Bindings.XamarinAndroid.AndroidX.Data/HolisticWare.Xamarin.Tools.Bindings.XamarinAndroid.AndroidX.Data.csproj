@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <DefaultItemExcludes>$(DefaultItemExcludes);**\.DS_Store;.\mappings\**\*.csv</DefaultItemExcludes>
+  </PropertyGroup>
+  
+    
+  <ItemGroup>
+    <Folder Include="mappings\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="mappings\google-readonly-1-baseline\androidx-artifact-mapping.csv" />
+    <Content Include="mappings\google-readonly-1-baseline\androidx-artifact-mapping.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="mappings\google-readonly-1-baseline\androidx-class-mapping.csv" />
+    <Content Include="mappings\google-readonly-1-baseline\androidx-class-mapping.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="mappings\google-readonly-2-baseline-prettyfied\androidx-artifact-mapping.csv" />
+    <Content Include="mappings\google-readonly-2-baseline-prettyfied\androidx-artifact-mapping.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="mappings\google-readonly-2-baseline-prettyfied\androidx-class-mapping.csv" />
+    <Content Include="mappings\google-readonly-2-baseline-prettyfied\androidx-class-mapping.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+    
+</Project>
