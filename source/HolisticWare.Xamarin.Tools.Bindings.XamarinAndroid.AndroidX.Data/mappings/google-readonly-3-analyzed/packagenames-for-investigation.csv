@@ -1,0 +1,10 @@
+android.support.annotation.,                                        ,androidx.annotation.
+android.support.constraint.,                                        ,androidx.constraintlayout.
+android.support.content.,                                           ,androidx.contentpager.
+android.support.media2.,                                            ,android.support.media2.
+android.support.multidex.,                                          ,androidx.multidex.
+android.support.v14.preference.,                                    ,androidx.preference.
+android.support.v4.content.res.,                                    ,androidx.core.content.res.
+android.support.v4.media.,                                          ,androidx.media.
+android.support.v4.view.accessibility.,                             ,androidx.core.view.accessibility.
+android.support.v7.graphics.drawable.,                              ,androidx.appcompat.graphics.drawable.

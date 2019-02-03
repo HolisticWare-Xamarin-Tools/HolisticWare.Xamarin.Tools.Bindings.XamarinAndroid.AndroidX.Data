@@ -1,6 +1,7 @@
 ﻿# Android.Support <-> AndroidX
 
-Set of mappings from/to Android.Support to/from AndroidX, both on Android native side and Managed (.NET) side.
+Set of mappings from/to Android.Support to/from AndroidX, both on Android native side and Managed 
+(.NET) side.
 
 Google migration guide: 
 
@@ -11,6 +12,28 @@ mentiones 2 mapping files (CSV)
 *   https://developer.android.com/topic/libraries/support-library/downloads/androidx-class-mapping.csv
 
 *   https://developer.android.com/topic/libraries/support-library/downloads/androidx-artifact-mapping.csv
+
+## Structure
+
+*   Google's Mappings
+
+    *   `mappings/google-readonly-1-baseline/`
+
+    *  Googles Mappings in CSV prettyfied format for reading in text editors 
+
+        *   `mappings/google-readonly-2-baseline-prettyfied/`
+
+*   Google's mess in transition
+
+    *   not all packages are migrated to AndroidX (`androidx.*`) and this makes migration beeep
+
+    *   `mappings/google-readonly-3-analyzed/`
+
+
+
+
+
+
 
 are considered baseline (readonly) and can be found here:
 

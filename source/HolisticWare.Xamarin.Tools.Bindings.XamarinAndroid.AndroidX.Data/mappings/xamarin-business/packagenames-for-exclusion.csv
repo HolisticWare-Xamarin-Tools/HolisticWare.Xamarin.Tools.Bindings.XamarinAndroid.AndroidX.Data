@@ -1,0 +1,6 @@
+# Android.Support packagename,                              ,AndroidX packagename
+android.arch.paging,                                        ,androidx.paging
+android.arch.persistence.db,                                ,androidx.sqlite.db
+android.arch.persistence.room,                              ,androidx.room
+android.databinding,                                        ,androidx.databinding
+android.support.test,                                       ,androidx.test
