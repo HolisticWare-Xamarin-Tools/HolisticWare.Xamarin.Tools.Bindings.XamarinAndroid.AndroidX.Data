@@ -1,5 +1,0 @@
-# ClassNamePattern,             ,StringMethod,      ,Comment
-__TypeRegistrations,            ,EndsWith,          ,__TypeRegistrations` needs to die  but i don’t know if it can die _yet_; that depends on the Designer getting onto the typemap bandwagon.
-Invoker,                        ,EndsWith,          ,`Invoker` types will need updating
-Implementor,                    ,EndsWith,          ,
-<>c__DisplayClass,              ,Contains,          ,<>__DisplayClass` from an anonymous method - like `Func<string> foo = a => { }`

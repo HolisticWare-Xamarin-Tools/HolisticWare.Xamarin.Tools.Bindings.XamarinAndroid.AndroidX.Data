@@ -1,4 +1,6 @@
-﻿# Android.Support <-> AndroidX
+﻿# Android.Support <-> AndroidX Data
+
+* Mapping Data for migration - NO ANALYSIS DATA *
 
 Set of mappings from/to Android.Support to/from AndroidX, both on Android native side and Managed 
 (.NET) side.
