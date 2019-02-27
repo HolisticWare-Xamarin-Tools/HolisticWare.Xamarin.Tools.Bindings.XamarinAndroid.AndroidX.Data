@@ -12,6 +12,12 @@
   <ItemGroup>
     <None Remove="mappings\google-readonly-2-baseline-prettyfied\androidx-artifact-mapping.csv" />
     <None Remove="mappings\xamarin-business\packagenames-for-exclusion.csv" />
+    <None Remove="mappings\API.Mappings.Merged.Google.with.Xamarin.Classes.csv" />
   </ItemGroup>
     
+  <ItemGroup>
+    <Content Include="mappings\API.Mappings.Merged.Google.with.Xamarin.Classes.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
 </Project>
