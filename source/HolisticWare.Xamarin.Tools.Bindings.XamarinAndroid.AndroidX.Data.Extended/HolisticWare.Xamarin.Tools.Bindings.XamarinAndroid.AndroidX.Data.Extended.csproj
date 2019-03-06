@@ -1,0 +1,59 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <DefaultItemExcludes>$(DefaultItemExcludes);**\.DS_Store;.\mappings\**\*.csv</DefaultItemExcludes>
+  </PropertyGroup>
+  
+    
+  <ItemGroup>
+    <Folder Include="mappings\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="mappings\google-readonly-1-baseline\androidx-artifact-mapping.csv" />
+    <Content Include="mappings\google-readonly-1-baseline\androidx-artifact-mapping.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="mappings\google-readonly-1-baseline\androidx-class-mapping.csv" />
+    <Content Include="mappings\google-readonly-1-baseline\androidx-class-mapping.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="mappings\google-readonly-2-baseline-prettyfied\androidx-artifact-mapping.csv" />
+    <Content Include="mappings\google-readonly-2-baseline-prettyfied\androidx-artifact-mapping.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="mappings\google-readonly-2-baseline-prettyfied\androidx-class-mapping.csv" />
+    <Content Include="mappings\google-readonly-2-baseline-prettyfied\androidx-class-mapping.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="mappings\xamarin-business\packagenames-for-exclusion.csv" />
+    <Content Include="mappings\xamarin-business\packagenames-for-exclusion.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="mappings\android-support-artifacts-to-xamarin-android-support-assembly.csv" />
+    <Content Include="mappings\android-support-artifacts-to-xamarin-android-support-assembly.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="mappings\androidx-material-packages-to-xamarin-namespaces.csv" />
+    <Content Include="mappings\androidx-material-packages-to-xamarin-namespaces.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="mappings\namespaces-android-support-to-androidx.csv" />
+    <Content Include="mappings\namespaces-android-support-to-androidx.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="mappings\packages-android-support-to-androidx.csv" />
+    <Content Include="mappings\packages-android-support-to-androidx.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="mappings\packages-android-support-to-xamarin-namespace.csv" />
+    <Content Include="mappings\packages-android-support-to-xamarin-namespace.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="mappings\xamarin-google-play-services-and-firebase-packages.csv" />
+    <Content Include="mappings\xamarin-google-play-services-and-firebase-packages.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+    
+</Project>
