@@ -5,6 +5,8 @@
     *   N = 2666
 
     *   [./Android.Support.merged.dll.TAR.csv](./Android.Support.merged.dll.TAR.csv)
+    
+    *   check: N = 2666 = `TARIG.Count()` + `TARNIG.Count()` = 1173 + 1493 = 2666
 
 *   TARIG - types Android registered found in Google's Mappings
 
