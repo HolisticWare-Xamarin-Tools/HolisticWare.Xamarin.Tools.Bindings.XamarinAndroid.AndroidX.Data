@@ -4795,6 +4795,1219 @@ public class ConfirmationOverlay : Java.Lang.Object, Android.Runtime.IJavaObject
 <h2>Removed Namespace Androidx.Browser.Browseractions</h2>
 
 <h3>Removed Type <span class='breaking' data-is-breaking>Androidx.Browser.Browseractions.BrowserActionItem</span></h3><h3>Removed Type <span class='breaking' data-is-breaking>Androidx.Browser.Browseractions.BrowserActionsFallbackMenuView</span></h3><h3>Removed Type <span class='breaking' data-is-breaking>Androidx.Browser.Browseractions.BrowserActionsIntent</span></h3></div> <!-- end namespace Androidx.Browser.Browseractions -->
+<!-- start namespace Android.Arch.Persistence.Db --> <div>
+<h2>New Namespace Android.Arch.Persistence.Db</h2>
+<div> <!-- start type ISupportSQLiteDatabase -->
+<h3>New Type Android.Arch.Persistence.Db.ISupportSQLiteDatabase</h3>
+<pre class='added' data-is-non-breaking>
+public interface ISupportSQLiteDatabase : Android.Runtime.IJavaObject, Java.IO.ICloseable, System.IDisposable {
+	// properties
+	<span class='added added-property ' data-is-non-breaking>public virtual System.Collections.Generic.IList&lt;Android.Util.Pair&gt; AttachedDbs { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>public virtual bool IsDatabaseIntegrityOk { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>public virtual bool IsDbLockedByCurrentThread { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>public virtual bool IsOpen { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>public virtual bool IsReadOnly { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>public virtual bool IsWriteAheadLoggingEnabled { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>public virtual long MaximumSize { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>public virtual long PageSize { get; set; }</span>
+	<span class='added added-property ' data-is-non-breaking>public virtual string Path { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>public virtual int Version { get; set; }</span>
+	// methods
+	<span class='added added-method ' data-is-non-breaking>public virtual void BeginTransaction ();</span>
+	<span class='added added-method ' data-is-non-breaking>public virtual void BeginTransactionNonExclusive ();</span>
+	<span class='added added-method ' data-is-non-breaking>public virtual void BeginTransactionWithListener (Android.Database.Sqlite.ISQLiteTransactionListener p0);</span>
+	<span class='added added-method ' data-is-non-breaking>public virtual void BeginTransactionWithListenerNonExclusive (Android.Database.Sqlite.ISQLiteTransactionListener p0);</span>
+	<span class='added added-method ' data-is-non-breaking>public virtual ISupportSQLiteStatement CompileStatement (string p0);</span>
+	<span class='added added-method ' data-is-non-breaking>public virtual int Delete (string p0, string p1, Java.Lang.Object[] p2);</span>
+	<span class='added added-method ' data-is-non-breaking>public virtual void DisableWriteAheadLogging ();</span>
+	<span class='added added-method ' data-is-non-breaking>public virtual bool EnableWriteAheadLogging ();</span>
+	<span class='added added-method ' data-is-non-breaking>public virtual void EndTransaction ();</span>
+	<span class='added added-method ' data-is-non-breaking>public virtual void ExecSQL (string p0);</span>
+	<span class='added added-method ' data-is-non-breaking>public virtual void ExecSQL (string p0, Java.Lang.Object[] p1);</span>
+	<span class='added added-method ' data-is-non-breaking>public virtual bool InTransaction ();</span>
+	<span class='added added-method ' data-is-non-breaking>public virtual long Insert (string p0, int p1, Android.Content.ContentValues p2);</span>
+	<span class='added added-method ' data-is-non-breaking>public virtual bool NeedUpgrade (int p0);</span>
+	<span class='added added-method ' data-is-non-breaking>public virtual Android.Database.ICursor Query (ISupportSQLiteQuery p0);</span>
+	<span class='added added-method ' data-is-non-breaking>public virtual Android.Database.ICursor Query (string p0);</span>
+	<span class='added added-method ' data-is-non-breaking>public virtual Android.Database.ICursor Query (ISupportSQLiteQuery p0, Android.OS.CancellationSignal p1);</span>
+	<span class='added added-method ' data-is-non-breaking>public virtual Android.Database.ICursor Query (string p0, Java.Lang.Object[] p1);</span>
+	<span class='added added-method ' data-is-non-breaking>public virtual void SetForeignKeyConstraintsEnabled (bool p0);</span>
+	<span class='added added-method ' data-is-non-breaking>public virtual void SetLocale (Java.Util.Locale p0);</span>
+	<span class='added added-method ' data-is-non-breaking>public virtual void SetMaxSqlCacheSize (int p0);</span>
+	<span class='added added-method ' data-is-non-breaking>public virtual long SetMaximumSize (long p0);</span>
+	<span class='added added-method ' data-is-non-breaking>public virtual void SetTransactionSuccessful ();</span>
+	<span class='added added-method ' data-is-non-breaking>public virtual int Update (string p0, int p1, Android.Content.ContentValues p2, string p3, Java.Lang.Object[] p4);</span>
+	<span class='added added-method ' data-is-non-breaking>public virtual bool YieldIfContendedSafely ();</span>
+	<span class='added added-method ' data-is-non-breaking>public virtual bool YieldIfContendedSafely (long p0);</span>
+}
+</pre>
+</div> <!-- end type ISupportSQLiteDatabase -->
+<div> <!-- start type ISupportSQLiteOpenHelper -->
+<h3>New Type Android.Arch.Persistence.Db.ISupportSQLiteOpenHelper</h3>
+<pre class='added' data-is-non-breaking>
+public interface ISupportSQLiteOpenHelper : Android.Runtime.IJavaObject, System.IDisposable {
+	// properties
+	<span class='added added-property ' data-is-non-breaking>public virtual string DatabaseName { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>public virtual ISupportSQLiteDatabase ReadableDatabase { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>public virtual ISupportSQLiteDatabase WritableDatabase { get; }</span>
+	// methods
+	<span class='added added-method ' data-is-non-breaking>public virtual void Close ();</span>
+	<span class='added added-method ' data-is-non-breaking>public virtual void SetWriteAheadLoggingEnabled (bool p0);</span>
+}
+</pre>
+</div> <!-- end type ISupportSQLiteOpenHelper -->
+<div> <!-- start type ISupportSQLiteOpenHelperFactory -->
+<h3>New Type Android.Arch.Persistence.Db.ISupportSQLiteOpenHelperFactory</h3>
+<pre class='added' data-is-non-breaking>
+public interface ISupportSQLiteOpenHelperFactory : Android.Runtime.IJavaObject, System.IDisposable {
+	// methods
+	<span class='added added-method ' data-is-non-breaking>public virtual ISupportSQLiteOpenHelper Create (SupportSQLiteOpenHelperConfiguration p0);</span>
+}
+</pre>
+</div> <!-- end type ISupportSQLiteOpenHelperFactory -->
+<div> <!-- start type ISupportSQLiteProgram -->
+<h3>New Type Android.Arch.Persistence.Db.ISupportSQLiteProgram</h3>
+<pre class='added' data-is-non-breaking>
+public interface ISupportSQLiteProgram : Android.Runtime.IJavaObject, Java.IO.ICloseable, System.IDisposable {
+	// methods
+	<span class='added added-method ' data-is-non-breaking>public virtual void BindBlob (int p0, byte[] p1);</span>
+	<span class='added added-method ' data-is-non-breaking>public virtual void BindDouble (int p0, double p1);</span>
+	<span class='added added-method ' data-is-non-breaking>public virtual void BindLong (int p0, long p1);</span>
+	<span class='added added-method ' data-is-non-breaking>public virtual void BindNull (int p0);</span>
+	<span class='added added-method ' data-is-non-breaking>public virtual void BindString (int p0, string p1);</span>
+	<span class='added added-method ' data-is-non-breaking>public virtual void ClearBindings ();</span>
+}
+</pre>
+</div> <!-- end type ISupportSQLiteProgram -->
+<div> <!-- start type ISupportSQLiteQuery -->
+<h3>New Type Android.Arch.Persistence.Db.ISupportSQLiteQuery</h3>
+<pre class='added' data-is-non-breaking>
+public interface ISupportSQLiteQuery : Android.Runtime.IJavaObject, System.IDisposable {
+	// properties
+	<span class='added added-property ' data-is-non-breaking>public virtual int ArgCount { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>public virtual string Sql { get; }</span>
+	// methods
+	<span class='added added-method ' data-is-non-breaking>public virtual void BindTo (ISupportSQLiteProgram p0);</span>
+}
+</pre>
+</div> <!-- end type ISupportSQLiteQuery -->
+<div> <!-- start type ISupportSQLiteStatement -->
+<h3>New Type Android.Arch.Persistence.Db.ISupportSQLiteStatement</h3>
+<pre class='added' data-is-non-breaking>
+public interface ISupportSQLiteStatement : ISupportSQLiteProgram, Android.Runtime.IJavaObject, Java.IO.ICloseable, System.IDisposable {
+	// methods
+	<span class='added added-method ' data-is-non-breaking>public virtual void Execute ();</span>
+	<span class='added added-method ' data-is-non-breaking>public virtual long ExecuteInsert ();</span>
+	<span class='added added-method ' data-is-non-breaking>public virtual int ExecuteUpdateDelete ();</span>
+	<span class='added added-method ' data-is-non-breaking>public virtual long SimpleQueryForLong ();</span>
+	<span class='added added-method ' data-is-non-breaking>public virtual string SimpleQueryForString ();</span>
+}
+</pre>
+</div> <!-- end type ISupportSQLiteStatement -->
+<div> <!-- start type SimpleSQLiteQuery -->
+<h3>New Type Android.Arch.Persistence.Db.SimpleSQLiteQuery</h3>
+<pre class='added' data-is-non-breaking>
+public sealed class SimpleSQLiteQuery : Java.Lang.Object, ISupportSQLiteQuery, Android.Runtime.IJavaObject, Java.Interop.IJavaPeerable, System.IDisposable {
+	// constructors
+	<span class='added added-constructor ' data-is-non-breaking>public SimpleSQLiteQuery (string query);</span>
+	<span class='added added-constructor ' data-is-non-breaking>public SimpleSQLiteQuery (string query, Java.Lang.Object[] bindArgs);</span>
+	// properties
+	<span class='added added-property ' data-is-non-breaking>public virtual int ArgCount { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>public override Java.Interop.JniPeerMembers JniPeerMembers { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>public virtual string Sql { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>protected override IntPtr ThresholdClass { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>protected override System.Type ThresholdType { get; }</span>
+	// methods
+	<span class='added added-method ' data-is-non-breaking>public static void Bind (ISupportSQLiteProgram statement, Java.Lang.Object[] bindArgs);</span>
+	<span class='added added-method ' data-is-non-breaking>public virtual void BindTo (ISupportSQLiteProgram statement);</span>
+}
+</pre>
+</div> <!-- end type SimpleSQLiteQuery -->
+<div> <!-- start type SupportSQLiteOpenHelperCallback -->
+<h3>New Type Android.Arch.Persistence.Db.SupportSQLiteOpenHelperCallback</h3>
+<pre class='added' data-is-non-breaking>
+public abstract class SupportSQLiteOpenHelperCallback : Java.Lang.Object, Android.Runtime.IJavaObject, Java.Interop.IJavaPeerable, System.IDisposable {
+	// constructors
+	<span class='added added-constructor ' data-is-non-breaking>public SupportSQLiteOpenHelperCallback (int version);</span>
+	<span class='added added-constructor ' data-is-non-breaking>protected SupportSQLiteOpenHelperCallback (IntPtr javaReference, Android.Runtime.JniHandleOwnership transfer);</span>
+	// properties
+	<span class='added added-property ' data-is-non-breaking>public override Java.Interop.JniPeerMembers JniPeerMembers { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>protected override IntPtr ThresholdClass { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>protected override System.Type ThresholdType { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>public int Version { get; set; }</span>
+	// methods
+	<span class='added added-method ' data-is-non-breaking>public virtual void OnConfigure (ISupportSQLiteDatabase db);</span>
+	<span class='added added-method ' data-is-non-breaking>public virtual void OnCorruption (ISupportSQLiteDatabase db);</span>
+	<span class='added added-method ' data-is-non-breaking>public virtual void OnCreate (ISupportSQLiteDatabase p0);</span>
+	<span class='added added-method ' data-is-non-breaking>public virtual void OnDowngrade (ISupportSQLiteDatabase db, int oldVersion, int newVersion);</span>
+	<span class='added added-method ' data-is-non-breaking>public virtual void OnOpen (ISupportSQLiteDatabase db);</span>
+	<span class='added added-method ' data-is-non-breaking>public virtual void OnUpgrade (ISupportSQLiteDatabase p0, int p1, int p2);</span>
+}
+</pre>
+</div> <!-- end type SupportSQLiteOpenHelperCallback -->
+<div> <!-- start type SupportSQLiteOpenHelperConfiguration -->
+<h3>New Type Android.Arch.Persistence.Db.SupportSQLiteOpenHelperConfiguration</h3>
+<pre class='added' data-is-non-breaking>
+public class SupportSQLiteOpenHelperConfiguration : Java.Lang.Object, Android.Runtime.IJavaObject, Java.Interop.IJavaPeerable, System.IDisposable {
+	// constructors
+	<span class='added added-constructor ' data-is-non-breaking>protected SupportSQLiteOpenHelperConfiguration (IntPtr javaReference, Android.Runtime.JniHandleOwnership transfer);</span>
+	// properties
+	<span class='added added-property ' data-is-non-breaking>public SupportSQLiteOpenHelperCallback Callback { get; set; }</span>
+	<span class='added added-property ' data-is-non-breaking>public Android.Content.Context Context { get; set; }</span>
+	<span class='added added-property ' data-is-non-breaking>public override Java.Interop.JniPeerMembers JniPeerMembers { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>public string Name { get; set; }</span>
+	<span class='added added-property ' data-is-non-breaking>protected override IntPtr ThresholdClass { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>protected override System.Type ThresholdType { get; }</span>
+	// methods
+	<span class='added added-method ' data-is-non-breaking>public static SupportSQLiteOpenHelperConfiguration.Builder InvokeBuilder (Android.Content.Context context);</span>
+
+	// inner types
+	public class Builder : Java.Lang.Object, Android.Runtime.IJavaObject, Java.Interop.IJavaPeerable, System.IDisposable {
+		// constructors
+		<span class='added added-constructor ' data-is-non-breaking>protected SupportSQLiteOpenHelperConfiguration.Builder (IntPtr javaReference, Android.Runtime.JniHandleOwnership transfer);</span>
+		// properties
+		<span class='added added-property ' data-is-non-breaking>public override Java.Interop.JniPeerMembers JniPeerMembers { get; }</span>
+		<span class='added added-property ' data-is-non-breaking>protected override IntPtr ThresholdClass { get; }</span>
+		<span class='added added-property ' data-is-non-breaking>protected override System.Type ThresholdType { get; }</span>
+		// methods
+		<span class='added added-method ' data-is-non-breaking>public virtual SupportSQLiteOpenHelperConfiguration Build ();</span>
+		<span class='added added-method ' data-is-non-breaking>public virtual SupportSQLiteOpenHelperConfiguration.Builder Callback (SupportSQLiteOpenHelperCallback callback);</span>
+		<span class='added added-method ' data-is-non-breaking>public virtual SupportSQLiteOpenHelperConfiguration.Builder Name (string name);</span>
+	}
+}
+</pre>
+</div> <!-- end type SupportSQLiteOpenHelperConfiguration -->
+<div> <!-- start type SupportSQLiteQueryBuilder -->
+<h3>New Type Android.Arch.Persistence.Db.SupportSQLiteQueryBuilder</h3>
+<pre class='added' data-is-non-breaking>
+public sealed class SupportSQLiteQueryBuilder : Java.Lang.Object, Android.Runtime.IJavaObject, Java.Interop.IJavaPeerable, System.IDisposable {
+	// properties
+	<span class='added added-property ' data-is-non-breaking>public override Java.Interop.JniPeerMembers JniPeerMembers { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>protected override IntPtr ThresholdClass { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>protected override System.Type ThresholdType { get; }</span>
+	// methods
+	<span class='added added-method ' data-is-non-breaking>public static SupportSQLiteQueryBuilder Builder (string tableName);</span>
+	<span class='added added-method ' data-is-non-breaking>public SupportSQLiteQueryBuilder Columns (string[] columns);</span>
+	<span class='added added-method ' data-is-non-breaking>public ISupportSQLiteQuery Create ();</span>
+	<span class='added added-method ' data-is-non-breaking>public SupportSQLiteQueryBuilder Distinct ();</span>
+	<span class='added added-method ' data-is-non-breaking>public SupportSQLiteQueryBuilder GroupBy (string groupBy);</span>
+	<span class='added added-method ' data-is-non-breaking>public SupportSQLiteQueryBuilder Having (string having);</span>
+	<span class='added added-method ' data-is-non-breaking>public SupportSQLiteQueryBuilder Limit (string limit);</span>
+	<span class='added added-method ' data-is-non-breaking>public SupportSQLiteQueryBuilder OrderBy (string orderBy);</span>
+	<span class='added added-method ' data-is-non-breaking>public SupportSQLiteQueryBuilder Selection (string selection, Java.Lang.Object[] bindArgs);</span>
+}
+</pre>
+</div> <!-- end type SupportSQLiteQueryBuilder -->
+</div> <!-- end namespace Android.Arch.Persistence.Db -->
+<!-- start namespace Android.Arch.Persistence.Db.Framework --> <div>
+<h2>New Namespace Android.Arch.Persistence.Db.Framework</h2>
+<div> <!-- start type FrameworkSQLiteOpenHelperFactory -->
+<h3>New Type Android.Arch.Persistence.Db.Framework.FrameworkSQLiteOpenHelperFactory</h3>
+<pre class='added' data-is-non-breaking>
+public sealed class FrameworkSQLiteOpenHelperFactory : Java.Lang.Object, Android.Arch.Persistence.Db.ISupportSQLiteOpenHelperFactory, Android.Runtime.IJavaObject, Java.Interop.IJavaPeerable, System.IDisposable {
+	// constructors
+	<span class='added added-constructor ' data-is-non-breaking>public FrameworkSQLiteOpenHelperFactory ();</span>
+	// properties
+	<span class='added added-property ' data-is-non-breaking>public override Java.Interop.JniPeerMembers JniPeerMembers { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>protected override IntPtr ThresholdClass { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>protected override System.Type ThresholdType { get; }</span>
+	// methods
+	<span class='added added-method ' data-is-non-breaking>public virtual Android.Arch.Persistence.Db.ISupportSQLiteOpenHelper Create (Android.Arch.Persistence.Db.SupportSQLiteOpenHelperConfiguration configuration);</span>
+}
+</pre>
+</div> <!-- end type FrameworkSQLiteOpenHelperFactory -->
+</div> <!-- end namespace Android.Arch.Persistence.Db.Framework -->
+<!-- start namespace Android.Arch.Persistence.Room --> <div>
+<h2>New Namespace Android.Arch.Persistence.Room</h2>
+<div> <!-- start type ColumnInfo -->
+<h3>New Type Android.Arch.Persistence.Room.ColumnInfo</h3>
+<pre class='added' data-is-non-breaking>
+public abstract class ColumnInfo : Java.Lang.Object, Android.Runtime.IJavaObject, Java.Interop.IJavaPeerable, System.IDisposable {
+	// fields
+	<span class='added added-field ' data-is-non-breaking>public static const int Binary;</span>
+	<span class='added added-field ' data-is-non-breaking>public static const int Blob;</span>
+	<span class='added added-field ' data-is-non-breaking>public static const string InheritFieldName = "[field-name]";</span>
+	<span class='added added-field ' data-is-non-breaking>public static const int Integer;</span>
+	<span class='added added-field ' data-is-non-breaking>public static const int Localized;</span>
+	<span class='added added-field ' data-is-non-breaking>public static const int Nocase;</span>
+	<span class='added added-field ' data-is-non-breaking>public static const int Real;</span>
+	<span class='added added-field ' data-is-non-breaking>public static const int Rtrim;</span>
+	<span class='added added-field ' data-is-non-breaking>public static const int Text;</span>
+	<span class='added added-field ' data-is-non-breaking>public static const int Undefined;</span>
+	<span class='added added-field ' data-is-non-breaking>public static const int Unicode;</span>
+	<span class='added added-field ' data-is-non-breaking>public static const int Unspecified;</span>
+}
+</pre>
+</div> <!-- end type ColumnInfo -->
+<div> <!-- start type ColumnInfoAttribute -->
+<h3>New Type Android.Arch.Persistence.Room.ColumnInfoAttribute</h3>
+<pre class='added' data-is-non-breaking>
+public class ColumnInfoAttribute : System.Attribute {
+	// constructors
+	<span class='added added-constructor ' data-is-non-breaking>public ColumnInfoAttribute ();</span>
+	// properties
+	<span class='added added-property ' data-is-non-breaking>public int Collate { get; set; }</span>
+	<span class='added added-property ' data-is-non-breaking>public bool Index { get; set; }</span>
+	<span class='added added-property ' data-is-non-breaking>public string Name { get; set; }</span>
+	<span class='added added-property ' data-is-non-breaking>public int TypeAffinity { get; set; }</span>
+}
+</pre>
+</div> <!-- end type ColumnInfoAttribute -->
+<div> <!-- start type ColumnInfoConsts -->
+<h3>New Type Android.Arch.Persistence.Room.ColumnInfoConsts</h3>
+<pre class='added' data-is-non-breaking>
+public abstract class ColumnInfoConsts : Android.Arch.Persistence.Room.ColumnInfo, Android.Runtime.IJavaObject, Java.Interop.IJavaPeerable, System.IDisposable {
+}
+</pre>
+</div> <!-- end type ColumnInfoConsts -->
+<div> <!-- start type DaoAttribute -->
+<h3>New Type Android.Arch.Persistence.Room.DaoAttribute</h3>
+<pre class='added' data-is-non-breaking>
+public class DaoAttribute : System.Attribute {
+	// constructors
+	<span class='added added-constructor ' data-is-non-breaking>public DaoAttribute ();</span>
+}
+</pre>
+</div> <!-- end type DaoAttribute -->
+<div> <!-- start type DatabaseAttribute -->
+<h3>New Type Android.Arch.Persistence.Room.DatabaseAttribute</h3>
+<pre class='added' data-is-non-breaking>
+public class DatabaseAttribute : System.Attribute {
+	// constructors
+	<span class='added added-constructor ' data-is-non-breaking>public DatabaseAttribute ();</span>
+	// properties
+	<span class='added added-property ' data-is-non-breaking>public Java.Lang.Class[] Entities { get; set; }</span>
+	<span class='added added-property ' data-is-non-breaking>public bool ExportSchema { get; set; }</span>
+	<span class='added added-property ' data-is-non-breaking>public int Version { get; set; }</span>
+}
+</pre>
+</div> <!-- end type DatabaseAttribute -->
+<div> <!-- start type DatabaseConfiguration -->
+<h3>New Type Android.Arch.Persistence.Room.DatabaseConfiguration</h3>
+<pre class='added' data-is-non-breaking>
+public class DatabaseConfiguration : Java.Lang.Object, Android.Runtime.IJavaObject, Java.Interop.IJavaPeerable, System.IDisposable {
+	// constructors
+	<span class='added added-constructor ' data-is-non-breaking>protected DatabaseConfiguration (IntPtr javaReference, Android.Runtime.JniHandleOwnership transfer);</span>
+	<span class='added added-constructor ' data-is-non-breaking>public DatabaseConfiguration (Android.Content.Context context, string name, Android.Arch.Persistence.Db.ISupportSQLiteOpenHelperFactory sqliteOpenHelperFactory, RoomDatabase.MigrationContainer migrationContainer, System.Collections.Generic.IList&lt;RoomDatabase.Callback&gt; callbacks, bool allowMainThreadQueries, RoomDatabase.JournalMode journalMode, bool requireMigration, System.Collections.Generic.ICollection&lt;Java.Lang.Integer&gt; migrationNotRequiredFrom);</span>
+	// properties
+	<span class='added added-property ' data-is-non-breaking>public bool AllowMainThreadQueries { get; set; }</span>
+	<span class='added added-property ' data-is-non-breaking>public System.Collections.IList Callbacks { get; set; }</span>
+	<span class='added added-property ' data-is-non-breaking>public Android.Content.Context Context { get; set; }</span>
+	<span class='added added-property ' data-is-non-breaking>public override Java.Interop.JniPeerMembers JniPeerMembers { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>public RoomDatabase.JournalMode JournalMode { get; set; }</span>
+	<span class='added added-property ' data-is-non-breaking>public RoomDatabase.MigrationContainer MigrationContainer { get; set; }</span>
+	<span class='added added-property ' data-is-non-breaking>public string Name { get; set; }</span>
+	<span class='added added-property ' data-is-non-breaking>public bool RequireMigration { get; set; }</span>
+	<span class='added added-property ' data-is-non-breaking>public Android.Arch.Persistence.Db.ISupportSQLiteOpenHelperFactory SqliteOpenHelperFactory { get; set; }</span>
+	<span class='added added-property ' data-is-non-breaking>protected override IntPtr ThresholdClass { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>protected override System.Type ThresholdType { get; }</span>
+	// methods
+	<span class='added added-method ' data-is-non-breaking>public virtual bool IsMigrationRequiredFrom (int version);</span>
+}
+</pre>
+</div> <!-- end type DatabaseConfiguration -->
+<div> <!-- start type DeleteAttribute -->
+<h3>New Type Android.Arch.Persistence.Room.DeleteAttribute</h3>
+<pre class='added' data-is-non-breaking>
+public class DeleteAttribute : System.Attribute {
+	// constructors
+	<span class='added added-constructor ' data-is-non-breaking>public DeleteAttribute ();</span>
+}
+</pre>
+</div> <!-- end type DeleteAttribute -->
+<div> <!-- start type EmbeddedAttribute -->
+<h3>New Type Android.Arch.Persistence.Room.EmbeddedAttribute</h3>
+<pre class='added' data-is-non-breaking>
+public class EmbeddedAttribute : System.Attribute {
+	// constructors
+	<span class='added added-constructor ' data-is-non-breaking>public EmbeddedAttribute ();</span>
+	// properties
+	<span class='added added-property ' data-is-non-breaking>public string Prefix { get; set; }</span>
+}
+</pre>
+</div> <!-- end type EmbeddedAttribute -->
+<div> <!-- start type EntityAttribute -->
+<h3>New Type Android.Arch.Persistence.Room.EntityAttribute</h3>
+<pre class='added' data-is-non-breaking>
+public class EntityAttribute : System.Attribute {
+	// constructors
+	<span class='added added-constructor ' data-is-non-breaking>public EntityAttribute ();</span>
+	// properties
+	<span class='added added-property ' data-is-non-breaking>public bool InheritSuperIndices { get; set; }</span>
+	<span class='added added-property ' data-is-non-breaking>public string[] PrimaryKeys { get; set; }</span>
+	<span class='added added-property ' data-is-non-breaking>public string TableName { get; set; }</span>
+}
+</pre>
+</div> <!-- end type EntityAttribute -->
+<div> <!-- start type EntityDeletionOrUpdateAdapter -->
+<h3>New Type Android.Arch.Persistence.Room.EntityDeletionOrUpdateAdapter</h3>
+<pre class='added' data-is-non-breaking>
+public abstract class EntityDeletionOrUpdateAdapter : Android.Arch.Persistence.Room.SharedSQLiteStatement, Android.Runtime.IJavaObject, Java.Interop.IJavaPeerable, System.IDisposable {
+	// constructors
+	<span class='added added-constructor ' data-is-non-breaking>public EntityDeletionOrUpdateAdapter (RoomDatabase database);</span>
+	<span class='added added-constructor ' data-is-non-breaking>protected EntityDeletionOrUpdateAdapter (IntPtr javaReference, Android.Runtime.JniHandleOwnership transfer);</span>
+	// properties
+	<span class='added added-property ' data-is-non-breaking>public override Java.Interop.JniPeerMembers JniPeerMembers { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>protected override IntPtr ThresholdClass { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>protected override System.Type ThresholdType { get; }</span>
+	// methods
+	<span class='added added-method ' data-is-non-breaking>protected virtual void Bind (Android.Arch.Persistence.Db.ISupportSQLiteStatement p0, Java.Lang.Object p1);</span>
+	<span class='added added-method ' data-is-non-breaking>public int Handle (Java.Lang.Object entity);</span>
+	<span class='added added-method ' data-is-non-breaking>public int HandleMultiple (Java.Lang.IIterable entities);</span>
+	<span class='added added-method ' data-is-non-breaking>public int HandleMultiple (Java.Lang.Object[] entities);</span>
+}
+</pre>
+</div> <!-- end type EntityDeletionOrUpdateAdapter -->
+<div> <!-- start type EntityInsertionAdapter -->
+<h3>New Type Android.Arch.Persistence.Room.EntityInsertionAdapter</h3>
+<pre class='added' data-is-non-breaking>
+public abstract class EntityInsertionAdapter : Android.Arch.Persistence.Room.SharedSQLiteStatement, Android.Runtime.IJavaObject, Java.Interop.IJavaPeerable, System.IDisposable {
+	// constructors
+	<span class='added added-constructor ' data-is-non-breaking>public EntityInsertionAdapter (RoomDatabase database);</span>
+	<span class='added added-constructor ' data-is-non-breaking>protected EntityInsertionAdapter (IntPtr javaReference, Android.Runtime.JniHandleOwnership transfer);</span>
+	// properties
+	<span class='added added-property ' data-is-non-breaking>public override Java.Interop.JniPeerMembers JniPeerMembers { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>protected override IntPtr ThresholdClass { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>protected override System.Type ThresholdType { get; }</span>
+	// methods
+	<span class='added added-method ' data-is-non-breaking>protected virtual void Bind (Android.Arch.Persistence.Db.ISupportSQLiteStatement p0, Java.Lang.Object p1);</span>
+	<span class='added added-method ' data-is-non-breaking>public void Insert (Java.Lang.IIterable entities);</span>
+	<span class='added added-method ' data-is-non-breaking>public void Insert (Java.Lang.Object entity);</span>
+	<span class='added added-method ' data-is-non-breaking>public void Insert (Java.Lang.Object[] entities);</span>
+	<span class='added added-method ' data-is-non-breaking>public long InsertAndReturnId (Java.Lang.Object entity);</span>
+	<span class='added added-method ' data-is-non-breaking>public long[] InsertAndReturnIdsArray (Java.Lang.Object[] entities);</span>
+	<span class='added added-method ' data-is-non-breaking>public long[] InsertAndReturnIdsArray (System.Collections.ICollection entities);</span>
+	<span class='added added-method ' data-is-non-breaking>public Java.Lang.Long[] InsertAndReturnIdsArrayBox (Java.Lang.Object[] entities);</span>
+	<span class='added added-method ' data-is-non-breaking>public Java.Lang.Long[] InsertAndReturnIdsArrayBox (System.Collections.ICollection entities);</span>
+	<span class='added added-method ' data-is-non-breaking>public System.Collections.Generic.IList&lt;Java.Lang.Long&gt; InsertAndReturnIdsList (Java.Lang.Object[] entities);</span>
+	<span class='added added-method ' data-is-non-breaking>public System.Collections.Generic.IList&lt;Java.Lang.Long&gt; InsertAndReturnIdsList (System.Collections.ICollection entities);</span>
+}
+</pre>
+</div> <!-- end type EntityInsertionAdapter -->
+<div> <!-- start type ForeignKey -->
+<h3>New Type Android.Arch.Persistence.Room.ForeignKey</h3>
+<pre class='added' data-is-non-breaking>
+public abstract class ForeignKey : Java.Lang.Object, Android.Runtime.IJavaObject, Java.Interop.IJavaPeerable, System.IDisposable {
+	// fields
+	<span class='added added-field ' data-is-non-breaking>public static const int Cascade;</span>
+	<span class='added added-field ' data-is-non-breaking>public static const int NoAction;</span>
+	<span class='added added-field ' data-is-non-breaking>public static const int Restrict;</span>
+	<span class='added added-field ' data-is-non-breaking>public static const int SetDefault;</span>
+	<span class='added added-field ' data-is-non-breaking>public static const int SetNull;</span>
+}
+</pre>
+</div> <!-- end type ForeignKey -->
+<div> <!-- start type ForeignKeyAttribute -->
+<h3>New Type Android.Arch.Persistence.Room.ForeignKeyAttribute</h3>
+<pre class='added' data-is-non-breaking>
+public class ForeignKeyAttribute : System.Attribute {
+	// constructors
+	<span class='added added-constructor ' data-is-non-breaking>public ForeignKeyAttribute ();</span>
+	// properties
+	<span class='added added-property ' data-is-non-breaking>public string[] ChildColumns { get; set; }</span>
+	<span class='added added-property ' data-is-non-breaking>public bool Deferred { get; set; }</span>
+	<span class='added added-property ' data-is-non-breaking>public Java.Lang.Class Entity { get; set; }</span>
+	<span class='added added-property ' data-is-non-breaking>public int OnDelete { get; set; }</span>
+	<span class='added added-property ' data-is-non-breaking>public int OnUpdate { get; set; }</span>
+	<span class='added added-property ' data-is-non-breaking>public string[] ParentColumns { get; set; }</span>
+}
+</pre>
+</div> <!-- end type ForeignKeyAttribute -->
+<div> <!-- start type ForeignKeyConsts -->
+<h3>New Type Android.Arch.Persistence.Room.ForeignKeyConsts</h3>
+<pre class='added' data-is-non-breaking>
+public abstract class ForeignKeyConsts : Android.Arch.Persistence.Room.ForeignKey, Android.Runtime.IJavaObject, Java.Interop.IJavaPeerable, System.IDisposable {
+}
+</pre>
+</div> <!-- end type ForeignKeyConsts -->
+<div> <!-- start type IColumnInfo -->
+<h3>New Type Android.Arch.Persistence.Room.IColumnInfo</h3>
+<pre class='added' data-is-non-breaking>
+public interface IColumnInfo : Android.Runtime.IJavaObject, Java.Lang.Annotation.IAnnotation, System.IDisposable {
+	// methods
+	<span class='added added-method ' data-is-non-breaking>public virtual int Collate ();</span>
+	<span class='added added-method ' data-is-non-breaking>public virtual bool Index ();</span>
+	<span class='added added-method ' data-is-non-breaking>public virtual string Name ();</span>
+	<span class='added added-method ' data-is-non-breaking>public virtual int TypeAffinity ();</span>
+}
+</pre>
+</div> <!-- end type IColumnInfo -->
+<div> <!-- start type IColumnInfoCollate -->
+<h3>New Type Android.Arch.Persistence.Room.IColumnInfoCollate</h3>
+<pre class='added' data-is-non-breaking>
+public interface IColumnInfoCollate : Android.Runtime.IJavaObject, Java.Lang.Annotation.IAnnotation, System.IDisposable {
+}
+</pre>
+</div> <!-- end type IColumnInfoCollate -->
+<div> <!-- start type IColumnInfoSQLiteTypeAffinity -->
+<h3>New Type Android.Arch.Persistence.Room.IColumnInfoSQLiteTypeAffinity</h3>
+<pre class='added' data-is-non-breaking>
+public interface IColumnInfoSQLiteTypeAffinity : Android.Runtime.IJavaObject, Java.Lang.Annotation.IAnnotation, System.IDisposable {
+}
+</pre>
+</div> <!-- end type IColumnInfoSQLiteTypeAffinity -->
+<div> <!-- start type IDao -->
+<h3>New Type Android.Arch.Persistence.Room.IDao</h3>
+<pre class='added' data-is-non-breaking>
+public interface IDao : Android.Runtime.IJavaObject, Java.Lang.Annotation.IAnnotation, System.IDisposable {
+}
+</pre>
+</div> <!-- end type IDao -->
+<div> <!-- start type IDatabase -->
+<h3>New Type Android.Arch.Persistence.Room.IDatabase</h3>
+<pre class='added' data-is-non-breaking>
+public interface IDatabase : Android.Runtime.IJavaObject, Java.Lang.Annotation.IAnnotation, System.IDisposable {
+	// methods
+	<span class='added added-method ' data-is-non-breaking>public virtual Java.Lang.Class[] Entities ();</span>
+	<span class='added added-method ' data-is-non-breaking>public virtual bool ExportSchema ();</span>
+	<span class='added added-method ' data-is-non-breaking>public virtual int Version ();</span>
+}
+</pre>
+</div> <!-- end type IDatabase -->
+<div> <!-- start type IDelete -->
+<h3>New Type Android.Arch.Persistence.Room.IDelete</h3>
+<pre class='added' data-is-non-breaking>
+public interface IDelete : Android.Runtime.IJavaObject, Java.Lang.Annotation.IAnnotation, System.IDisposable {
+}
+</pre>
+</div> <!-- end type IDelete -->
+<div> <!-- start type IEmbedded -->
+<h3>New Type Android.Arch.Persistence.Room.IEmbedded</h3>
+<pre class='added' data-is-non-breaking>
+public interface IEmbedded : Android.Runtime.IJavaObject, Java.Lang.Annotation.IAnnotation, System.IDisposable {
+	// methods
+	<span class='added added-method ' data-is-non-breaking>public virtual string Prefix ();</span>
+}
+</pre>
+</div> <!-- end type IEmbedded -->
+<div> <!-- start type IEntity -->
+<h3>New Type Android.Arch.Persistence.Room.IEntity</h3>
+<pre class='added' data-is-non-breaking>
+public interface IEntity : Android.Runtime.IJavaObject, Java.Lang.Annotation.IAnnotation, System.IDisposable {
+	// methods
+	<span class='added added-method ' data-is-non-breaking>public virtual IForeignKey[] ForeignKeys ();</span>
+	<span class='added added-method ' data-is-non-breaking>public virtual IIndex[] Indices ();</span>
+	<span class='added added-method ' data-is-non-breaking>public virtual bool InheritSuperIndices ();</span>
+	<span class='added added-method ' data-is-non-breaking>public virtual string[] PrimaryKeys ();</span>
+	<span class='added added-method ' data-is-non-breaking>public virtual string TableName ();</span>
+}
+</pre>
+</div> <!-- end type IEntity -->
+<div> <!-- start type IForeignKey -->
+<h3>New Type Android.Arch.Persistence.Room.IForeignKey</h3>
+<pre class='added' data-is-non-breaking>
+public interface IForeignKey : Android.Runtime.IJavaObject, Java.Lang.Annotation.IAnnotation, System.IDisposable {
+	// methods
+	<span class='added added-method ' data-is-non-breaking>public virtual string[] ChildColumns ();</span>
+	<span class='added added-method ' data-is-non-breaking>public virtual bool Deferred ();</span>
+	<span class='added added-method ' data-is-non-breaking>public virtual Java.Lang.Class Entity ();</span>
+	<span class='added added-method ' data-is-non-breaking>public virtual int OnDelete ();</span>
+	<span class='added added-method ' data-is-non-breaking>public virtual int OnUpdate ();</span>
+	<span class='added added-method ' data-is-non-breaking>public virtual string[] ParentColumns ();</span>
+}
+</pre>
+</div> <!-- end type IForeignKey -->
+<div> <!-- start type IForeignKeyAction -->
+<h3>New Type Android.Arch.Persistence.Room.IForeignKeyAction</h3>
+<pre class='added' data-is-non-breaking>
+public interface IForeignKeyAction : Android.Runtime.IJavaObject, Java.Lang.Annotation.IAnnotation, System.IDisposable {
+}
+</pre>
+</div> <!-- end type IForeignKeyAction -->
+<div> <!-- start type IIgnore -->
+<h3>New Type Android.Arch.Persistence.Room.IIgnore</h3>
+<pre class='added' data-is-non-breaking>
+public interface IIgnore : Android.Runtime.IJavaObject, Java.Lang.Annotation.IAnnotation, System.IDisposable {
+}
+</pre>
+</div> <!-- end type IIgnore -->
+<div> <!-- start type IIndex -->
+<h3>New Type Android.Arch.Persistence.Room.IIndex</h3>
+<pre class='added' data-is-non-breaking>
+public interface IIndex : Android.Runtime.IJavaObject, Java.Lang.Annotation.IAnnotation, System.IDisposable {
+	// methods
+	<span class='added added-method ' data-is-non-breaking>public virtual string Name ();</span>
+	<span class='added added-method ' data-is-non-breaking>public virtual bool Unique ();</span>
+	<span class='added added-method ' data-is-non-breaking>public virtual string[] Value ();</span>
+}
+</pre>
+</div> <!-- end type IIndex -->
+<div> <!-- start type IInsert -->
+<h3>New Type Android.Arch.Persistence.Room.IInsert</h3>
+<pre class='added' data-is-non-breaking>
+public interface IInsert : Android.Runtime.IJavaObject, Java.Lang.Annotation.IAnnotation, System.IDisposable {
+	// methods
+	<span class='added added-method ' data-is-non-breaking>public virtual int OnConflict ();</span>
+}
+</pre>
+</div> <!-- end type IInsert -->
+<div> <!-- start type IOnConflictStrategy -->
+<h3>New Type Android.Arch.Persistence.Room.IOnConflictStrategy</h3>
+<pre class='added' data-is-non-breaking>
+public interface IOnConflictStrategy : Android.Runtime.IJavaObject, Java.Lang.Annotation.IAnnotation, System.IDisposable {
+}
+</pre>
+</div> <!-- end type IOnConflictStrategy -->
+<div> <!-- start type IPrimaryKey -->
+<h3>New Type Android.Arch.Persistence.Room.IPrimaryKey</h3>
+<pre class='added' data-is-non-breaking>
+public interface IPrimaryKey : Android.Runtime.IJavaObject, Java.Lang.Annotation.IAnnotation, System.IDisposable {
+	// methods
+	<span class='added added-method ' data-is-non-breaking>public virtual bool AutoGenerate ();</span>
+}
+</pre>
+</div> <!-- end type IPrimaryKey -->
+<div> <!-- start type IQuery -->
+<h3>New Type Android.Arch.Persistence.Room.IQuery</h3>
+<pre class='added' data-is-non-breaking>
+public interface IQuery : Android.Runtime.IJavaObject, Java.Lang.Annotation.IAnnotation, System.IDisposable {
+	// methods
+	<span class='added added-method ' data-is-non-breaking>public virtual string Value ();</span>
+}
+</pre>
+</div> <!-- end type IQuery -->
+<div> <!-- start type IRawQuery -->
+<h3>New Type Android.Arch.Persistence.Room.IRawQuery</h3>
+<pre class='added' data-is-non-breaking>
+public interface IRawQuery : Android.Runtime.IJavaObject, Java.Lang.Annotation.IAnnotation, System.IDisposable {
+	// methods
+	<span class='added added-method ' data-is-non-breaking>public virtual Java.Lang.Class[] ObservedEntities ();</span>
+}
+</pre>
+</div> <!-- end type IRawQuery -->
+<div> <!-- start type IRelation -->
+<h3>New Type Android.Arch.Persistence.Room.IRelation</h3>
+<pre class='added' data-is-non-breaking>
+public interface IRelation : Android.Runtime.IJavaObject, Java.Lang.Annotation.IAnnotation, System.IDisposable {
+	// methods
+	<span class='added added-method ' data-is-non-breaking>public virtual Java.Lang.Class Entity ();</span>
+	<span class='added added-method ' data-is-non-breaking>public virtual string EntityColumn ();</span>
+	<span class='added added-method ' data-is-non-breaking>public virtual string ParentColumn ();</span>
+	<span class='added added-method ' data-is-non-breaking>public virtual string[] Projection ();</span>
+}
+</pre>
+</div> <!-- end type IRelation -->
+<div> <!-- start type ISkipQueryVerification -->
+<h3>New Type Android.Arch.Persistence.Room.ISkipQueryVerification</h3>
+<pre class='added' data-is-non-breaking>
+public interface ISkipQueryVerification : Android.Runtime.IJavaObject, Java.Lang.Annotation.IAnnotation, System.IDisposable {
+}
+</pre>
+</div> <!-- end type ISkipQueryVerification -->
+<div> <!-- start type ITransaction -->
+<h3>New Type Android.Arch.Persistence.Room.ITransaction</h3>
+<pre class='added' data-is-non-breaking>
+public interface ITransaction : Android.Runtime.IJavaObject, Java.Lang.Annotation.IAnnotation, System.IDisposable {
+}
+</pre>
+</div> <!-- end type ITransaction -->
+<div> <!-- start type ITypeConverter -->
+<h3>New Type Android.Arch.Persistence.Room.ITypeConverter</h3>
+<pre class='added' data-is-non-breaking>
+public interface ITypeConverter : Android.Runtime.IJavaObject, Java.Lang.Annotation.IAnnotation, System.IDisposable {
+}
+</pre>
+</div> <!-- end type ITypeConverter -->
+<div> <!-- start type ITypeConverters -->
+<h3>New Type Android.Arch.Persistence.Room.ITypeConverters</h3>
+<pre class='added' data-is-non-breaking>
+public interface ITypeConverters : Android.Runtime.IJavaObject, Java.Lang.Annotation.IAnnotation, System.IDisposable {
+	// methods
+	<span class='added added-method ' data-is-non-breaking>public virtual Java.Lang.Class[] Value ();</span>
+}
+</pre>
+</div> <!-- end type ITypeConverters -->
+<div> <!-- start type IUpdate -->
+<h3>New Type Android.Arch.Persistence.Room.IUpdate</h3>
+<pre class='added' data-is-non-breaking>
+public interface IUpdate : Android.Runtime.IJavaObject, Java.Lang.Annotation.IAnnotation, System.IDisposable {
+	// methods
+	<span class='added added-method ' data-is-non-breaking>public virtual int OnConflict ();</span>
+}
+</pre>
+</div> <!-- end type IUpdate -->
+<div> <!-- start type IgnoreAttribute -->
+<h3>New Type Android.Arch.Persistence.Room.IgnoreAttribute</h3>
+<pre class='added' data-is-non-breaking>
+public class IgnoreAttribute : System.Attribute {
+	// constructors
+	<span class='added added-constructor ' data-is-non-breaking>public IgnoreAttribute ();</span>
+}
+</pre>
+</div> <!-- end type IgnoreAttribute -->
+<div> <!-- start type IndexAttribute -->
+<h3>New Type Android.Arch.Persistence.Room.IndexAttribute</h3>
+<pre class='added' data-is-non-breaking>
+public class IndexAttribute : System.Attribute {
+	// constructors
+	<span class='added added-constructor ' data-is-non-breaking>public IndexAttribute ();</span>
+	// properties
+	<span class='added added-property ' data-is-non-breaking>public string Name { get; set; }</span>
+	<span class='added added-property ' data-is-non-breaking>public bool Unique { get; set; }</span>
+	<span class='added added-property ' data-is-non-breaking>public string[] Value { get; set; }</span>
+}
+</pre>
+</div> <!-- end type IndexAttribute -->
+<div> <!-- start type InsertAttribute -->
+<h3>New Type Android.Arch.Persistence.Room.InsertAttribute</h3>
+<pre class='added' data-is-non-breaking>
+public class InsertAttribute : System.Attribute {
+	// constructors
+	<span class='added added-constructor ' data-is-non-breaking>public InsertAttribute ();</span>
+	// properties
+	<span class='added added-property ' data-is-non-breaking>public int OnConflict { get; set; }</span>
+}
+</pre>
+</div> <!-- end type InsertAttribute -->
+<div> <!-- start type InvalidationTracker -->
+<h3>New Type Android.Arch.Persistence.Room.InvalidationTracker</h3>
+<pre class='added' data-is-non-breaking>
+public class InvalidationTracker : Java.Lang.Object, Android.Runtime.IJavaObject, Java.Interop.IJavaPeerable, System.IDisposable {
+	// constructors
+	<span class='added added-constructor ' data-is-non-breaking>public InvalidationTracker (RoomDatabase database, string[] tableNames);</span>
+	<span class='added added-constructor ' data-is-non-breaking>protected InvalidationTracker (IntPtr javaReference, Android.Runtime.JniHandleOwnership transfer);</span>
+	// properties
+	<span class='added added-property ' data-is-non-breaking>public override Java.Interop.JniPeerMembers JniPeerMembers { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>protected override IntPtr ThresholdClass { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>protected override System.Type ThresholdType { get; }</span>
+	// methods
+	<span class='added added-method ' data-is-non-breaking>public virtual void AddObserver (InvalidationTracker.Observer observer);</span>
+	<span class='added added-method ' data-is-non-breaking>public virtual void AddWeakObserver (InvalidationTracker.Observer observer);</span>
+	<span class='added added-method ' data-is-non-breaking>public virtual void RefreshVersionsAsync ();</span>
+	<span class='added added-method ' data-is-non-breaking>public virtual void RefreshVersionsSync ();</span>
+	<span class='added added-method ' data-is-non-breaking>public virtual void RemoveObserver (InvalidationTracker.Observer observer);</span>
+
+	// inner types
+	public class ObservedTableTracker : Java.Lang.Object, Android.Runtime.IJavaObject, Java.Interop.IJavaPeerable, System.IDisposable {
+		// constructors
+		<span class='added added-constructor ' data-is-non-breaking>protected InvalidationTracker.ObservedTableTracker (IntPtr javaReference, Android.Runtime.JniHandleOwnership transfer);</span>
+		// properties
+		<span class='added added-property ' data-is-non-breaking>public override Java.Interop.JniPeerMembers JniPeerMembers { get; }</span>
+		<span class='added added-property ' data-is-non-breaking>protected override IntPtr ThresholdClass { get; }</span>
+		<span class='added added-property ' data-is-non-breaking>protected override System.Type ThresholdType { get; }</span>
+	}
+	public abstract class Observer : Java.Lang.Object, Android.Runtime.IJavaObject, Java.Interop.IJavaPeerable, System.IDisposable {
+		// constructors
+		<span class='added added-constructor ' data-is-non-breaking>public InvalidationTracker.Observer (string[] tables);</span>
+		<span class='added added-constructor ' data-is-non-breaking>protected InvalidationTracker.Observer (IntPtr javaReference, Android.Runtime.JniHandleOwnership transfer);</span>
+		<span class='added added-constructor ' data-is-non-breaking>protected InvalidationTracker.Observer (string firstTable, string[] rest);</span>
+		// properties
+		<span class='added added-property ' data-is-non-breaking>public override Java.Interop.JniPeerMembers JniPeerMembers { get; }</span>
+		<span class='added added-property ' data-is-non-breaking>protected override IntPtr ThresholdClass { get; }</span>
+		<span class='added added-property ' data-is-non-breaking>protected override System.Type ThresholdType { get; }</span>
+		// methods
+		<span class='added added-method ' data-is-non-breaking>public virtual void OnInvalidated (System.Collections.Generic.ICollection&lt;string&gt; p0);</span>
+	}
+	public class ObserverWrapper : Java.Lang.Object, Android.Runtime.IJavaObject, Java.Interop.IJavaPeerable, System.IDisposable {
+		// constructors
+		<span class='added added-constructor ' data-is-non-breaking>protected InvalidationTracker.ObserverWrapper (IntPtr javaReference, Android.Runtime.JniHandleOwnership transfer);</span>
+		// properties
+		<span class='added added-property ' data-is-non-breaking>public override Java.Interop.JniPeerMembers JniPeerMembers { get; }</span>
+		<span class='added added-property ' data-is-non-breaking>protected override IntPtr ThresholdClass { get; }</span>
+		<span class='added added-property ' data-is-non-breaking>protected override System.Type ThresholdType { get; }</span>
+	}
+	public class WeakObserver : Android.Arch.Persistence.Room.InvalidationTracker+Observer, Android.Runtime.IJavaObject, Java.Interop.IJavaPeerable, System.IDisposable {
+		// constructors
+		<span class='added added-constructor ' data-is-non-breaking>protected InvalidationTracker.WeakObserver (IntPtr javaReference, Android.Runtime.JniHandleOwnership transfer);</span>
+		// properties
+		<span class='added added-property ' data-is-non-breaking>public override Java.Interop.JniPeerMembers JniPeerMembers { get; }</span>
+		<span class='added added-property ' data-is-non-breaking>protected override IntPtr ThresholdClass { get; }</span>
+		<span class='added added-property ' data-is-non-breaking>protected override System.Type ThresholdType { get; }</span>
+		// methods
+		<span class='added added-method ' data-is-non-breaking>public override void OnInvalidated (System.Collections.Generic.ICollection&lt;string&gt; tables);</span>
+	}
+}
+</pre>
+</div> <!-- end type InvalidationTracker -->
+<div> <!-- start type OnConflictStrategy -->
+<h3>New Type Android.Arch.Persistence.Room.OnConflictStrategy</h3>
+<pre class='added' data-is-non-breaking>
+public abstract class OnConflictStrategy : Java.Lang.Object, Android.Runtime.IJavaObject, Java.Interop.IJavaPeerable, System.IDisposable {
+	// fields
+	<span class='added added-field ' data-is-non-breaking>public static const int Abort;</span>
+	<span class='added added-field ' data-is-non-breaking>public static const int Fail;</span>
+	<span class='added added-field ' data-is-non-breaking>public static const int Ignore;</span>
+	<span class='added added-field ' data-is-non-breaking>public static const int Replace;</span>
+	<span class='added added-field ' data-is-non-breaking>public static const int Rollback;</span>
+}
+</pre>
+</div> <!-- end type OnConflictStrategy -->
+<div> <!-- start type OnConflictStrategyAttribute -->
+<h3>New Type Android.Arch.Persistence.Room.OnConflictStrategyAttribute</h3>
+<pre class='added' data-is-non-breaking>
+public class OnConflictStrategyAttribute : System.Attribute {
+	// constructors
+	<span class='added added-constructor ' data-is-non-breaking>public OnConflictStrategyAttribute ();</span>
+}
+</pre>
+</div> <!-- end type OnConflictStrategyAttribute -->
+<div> <!-- start type OnConflictStrategyConsts -->
+<h3>New Type Android.Arch.Persistence.Room.OnConflictStrategyConsts</h3>
+<pre class='added' data-is-non-breaking>
+public abstract class OnConflictStrategyConsts : Android.Arch.Persistence.Room.OnConflictStrategy, Android.Runtime.IJavaObject, Java.Interop.IJavaPeerable, System.IDisposable {
+}
+</pre>
+</div> <!-- end type OnConflictStrategyConsts -->
+<div> <!-- start type PrimaryKeyAttribute -->
+<h3>New Type Android.Arch.Persistence.Room.PrimaryKeyAttribute</h3>
+<pre class='added' data-is-non-breaking>
+public class PrimaryKeyAttribute : System.Attribute {
+	// constructors
+	<span class='added added-constructor ' data-is-non-breaking>public PrimaryKeyAttribute ();</span>
+	// properties
+	<span class='added added-property ' data-is-non-breaking>public bool AutoGenerate { get; set; }</span>
+}
+</pre>
+</div> <!-- end type PrimaryKeyAttribute -->
+<div> <!-- start type QueryAttribute -->
+<h3>New Type Android.Arch.Persistence.Room.QueryAttribute</h3>
+<pre class='added' data-is-non-breaking>
+public class QueryAttribute : System.Attribute {
+	// constructors
+	<span class='added added-constructor ' data-is-non-breaking>public QueryAttribute ();</span>
+	// properties
+	<span class='added added-property ' data-is-non-breaking>public string Value { get; set; }</span>
+}
+</pre>
+</div> <!-- end type QueryAttribute -->
+<div> <!-- start type RawQueryAttribute -->
+<h3>New Type Android.Arch.Persistence.Room.RawQueryAttribute</h3>
+<pre class='added' data-is-non-breaking>
+public class RawQueryAttribute : System.Attribute {
+	// constructors
+	<span class='added added-constructor ' data-is-non-breaking>public RawQueryAttribute ();</span>
+	// properties
+	<span class='added added-property ' data-is-non-breaking>public Java.Lang.Class[] ObservedEntities { get; set; }</span>
+}
+</pre>
+</div> <!-- end type RawQueryAttribute -->
+<div> <!-- start type RelationAttribute -->
+<h3>New Type Android.Arch.Persistence.Room.RelationAttribute</h3>
+<pre class='added' data-is-non-breaking>
+public class RelationAttribute : System.Attribute {
+	// constructors
+	<span class='added added-constructor ' data-is-non-breaking>public RelationAttribute ();</span>
+	// properties
+	<span class='added added-property ' data-is-non-breaking>public Java.Lang.Class Entity { get; set; }</span>
+	<span class='added added-property ' data-is-non-breaking>public string EntityColumn { get; set; }</span>
+	<span class='added added-property ' data-is-non-breaking>public string ParentColumn { get; set; }</span>
+	<span class='added added-property ' data-is-non-breaking>public string[] Projection { get; set; }</span>
+}
+</pre>
+</div> <!-- end type RelationAttribute -->
+<div> <!-- start type Room -->
+<h3>New Type Android.Arch.Persistence.Room.Room</h3>
+<pre class='added' data-is-non-breaking>
+public class Room : Java.Lang.Object, Android.Runtime.IJavaObject, Java.Interop.IJavaPeerable, System.IDisposable {
+	// constructors
+	<span class='added added-constructor ' data-is-non-breaking>public Room ();</span>
+	<span class='added added-constructor ' data-is-non-breaking>protected Room (IntPtr javaReference, Android.Runtime.JniHandleOwnership transfer);</span>
+	// fields
+	<span class='added added-field ' data-is-non-breaking>public static const string MasterTableName = "room_master_table";</span>
+	// properties
+	<span class='added added-property ' data-is-non-breaking>public override Java.Interop.JniPeerMembers JniPeerMembers { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>protected override IntPtr ThresholdClass { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>protected override System.Type ThresholdType { get; }</span>
+	// methods
+	<span class='added added-method ' data-is-non-breaking>public static RoomDatabase.Builder DatabaseBuilder (Android.Content.Context context, Java.Lang.Class klass, string name);</span>
+	<span class='added added-method ' data-is-non-breaking>public static RoomDatabase.Builder InMemoryDatabaseBuilder (Android.Content.Context context, Java.Lang.Class klass);</span>
+}
+</pre>
+</div> <!-- end type Room -->
+<div> <!-- start type RoomDatabase -->
+<h3>New Type Android.Arch.Persistence.Room.RoomDatabase</h3>
+<pre class='added' data-is-non-breaking>
+public abstract class RoomDatabase : Java.Lang.Object, Android.Runtime.IJavaObject, Java.Interop.IJavaPeerable, System.IDisposable {
+	// constructors
+	<span class='added added-constructor ' data-is-non-breaking>public RoomDatabase ();</span>
+	<span class='added added-constructor ' data-is-non-breaking>protected RoomDatabase (IntPtr javaReference, Android.Runtime.JniHandleOwnership transfer);</span>
+	// fields
+	<span class='added added-field ' data-is-non-breaking>public static const int MaxBindParameterCnt;</span>
+	// properties
+	<span class='added added-property ' data-is-non-breaking>public virtual InvalidationTracker InvalidationTracker { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>public virtual bool IsOpen { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>public override Java.Interop.JniPeerMembers JniPeerMembers { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>protected System.Collections.IList MCallbacks { get; set; }</span>
+	<span class='added added-property ' data-is-non-breaking>protected Android.Arch.Persistence.Db.ISupportSQLiteDatabase MDatabase { get; set; }</span>
+	<span class='added added-property ' data-is-non-breaking>public virtual Android.Arch.Persistence.Db.ISupportSQLiteOpenHelper OpenHelper { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>protected override IntPtr ThresholdClass { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>protected override System.Type ThresholdType { get; }</span>
+	// methods
+	<span class='added added-method ' data-is-non-breaking>public virtual void AssertNotMainThread ();</span>
+	<span class='added added-method ' data-is-non-breaking>public virtual void BeginTransaction ();</span>
+	<span class='added added-method ' data-is-non-breaking>public virtual void ClearAllTables ();</span>
+	<span class='added added-method ' data-is-non-breaking>public virtual void Close ();</span>
+	<span class='added added-method ' data-is-non-breaking>public virtual Android.Arch.Persistence.Db.ISupportSQLiteStatement CompileStatement (string sql);</span>
+	<span class='added added-method ' data-is-non-breaking>protected virtual InvalidationTracker CreateInvalidationTracker ();</span>
+	<span class='added added-method ' data-is-non-breaking>protected virtual Android.Arch.Persistence.Db.ISupportSQLiteOpenHelper CreateOpenHelper (DatabaseConfiguration p0);</span>
+	<span class='added added-method ' data-is-non-breaking>public virtual void EndTransaction ();</span>
+	<span class='added added-method ' data-is-non-breaking>public virtual bool InTransaction ();</span>
+	<span class='added added-method ' data-is-non-breaking>public virtual void Init (DatabaseConfiguration configuration);</span>
+	<span class='added added-method ' data-is-non-breaking>protected virtual void InternalInitInvalidationTracker (Android.Arch.Persistence.Db.ISupportSQLiteDatabase db);</span>
+	<span class='added added-method ' data-is-non-breaking>public virtual Android.Database.ICursor Query (Android.Arch.Persistence.Db.ISupportSQLiteQuery query);</span>
+	<span class='added added-method ' data-is-non-breaking>public virtual Android.Database.ICursor Query (string query, Java.Lang.Object[] args);</span>
+	<span class='added added-method ' data-is-non-breaking>public virtual void RunInTransaction (Java.Lang.IRunnable body);</span>
+	<span class='added added-method ' data-is-non-breaking>public virtual Java.Lang.Object RunInTransaction (Java.Util.Concurrent.ICallable body);</span>
+	<span class='added added-method ' data-is-non-breaking>public virtual void SetTransactionSuccessful ();</span>
+
+	// inner types
+	public class Builder : Java.Lang.Object, Android.Runtime.IJavaObject, Java.Interop.IJavaPeerable, System.IDisposable {
+		// constructors
+		<span class='added added-constructor ' data-is-non-breaking>protected RoomDatabase.Builder (IntPtr javaReference, Android.Runtime.JniHandleOwnership transfer);</span>
+		// properties
+		<span class='added added-property ' data-is-non-breaking>public override Java.Interop.JniPeerMembers JniPeerMembers { get; }</span>
+		<span class='added added-property ' data-is-non-breaking>protected override IntPtr ThresholdClass { get; }</span>
+		<span class='added added-property ' data-is-non-breaking>protected override System.Type ThresholdType { get; }</span>
+		// methods
+		<span class='added added-method ' data-is-non-breaking>public virtual RoomDatabase.Builder AddCallback (RoomDatabase.Callback callback);</span>
+		<span class='added added-method ' data-is-non-breaking>public virtual RoomDatabase.Builder AddMigrations (Migration.Migration[] migrations);</span>
+		<span class='added added-method ' data-is-non-breaking>public virtual RoomDatabase.Builder AllowMainThreadQueries ();</span>
+		<span class='added added-method ' data-is-non-breaking>public virtual Java.Lang.Object Build ();</span>
+		<span class='added added-method ' data-is-non-breaking>public virtual RoomDatabase.Builder FallbackToDestructiveMigration ();</span>
+		<span class='added added-method ' data-is-non-breaking>public virtual RoomDatabase.Builder FallbackToDestructiveMigrationFrom (int[] startVersions);</span>
+		<span class='added added-method ' data-is-non-breaking>public virtual RoomDatabase.Builder OpenHelperFactory (Android.Arch.Persistence.Db.ISupportSQLiteOpenHelperFactory factory);</span>
+		<span class='added added-method ' data-is-non-breaking>public virtual RoomDatabase.Builder SetJournalMode (RoomDatabase.JournalMode journalMode);</span>
+	}
+	public abstract class Callback : Java.Lang.Object, Android.Runtime.IJavaObject, Java.Interop.IJavaPeerable, System.IDisposable {
+		// constructors
+		<span class='added added-constructor ' data-is-non-breaking>public RoomDatabase.Callback ();</span>
+		<span class='added added-constructor ' data-is-non-breaking>protected RoomDatabase.Callback (IntPtr javaReference, Android.Runtime.JniHandleOwnership transfer);</span>
+		// properties
+		<span class='added added-property ' data-is-non-breaking>public override Java.Interop.JniPeerMembers JniPeerMembers { get; }</span>
+		<span class='added added-property ' data-is-non-breaking>protected override IntPtr ThresholdClass { get; }</span>
+		<span class='added added-property ' data-is-non-breaking>protected override System.Type ThresholdType { get; }</span>
+		// methods
+		<span class='added added-method ' data-is-non-breaking>public virtual void OnCreate (Android.Arch.Persistence.Db.ISupportSQLiteDatabase db);</span>
+		<span class='added added-method ' data-is-non-breaking>public virtual void OnOpen (Android.Arch.Persistence.Db.ISupportSQLiteDatabase db);</span>
+	}
+	public sealed class JournalMode : Java.Lang.Enum, Android.Runtime.IJavaObject, Java.IO.ISerializable, Java.Interop.IJavaPeerable, Java.Lang.IComparable, System.IDisposable {
+		// properties
+		<span class='added added-property ' data-is-non-breaking>public static RoomDatabase.JournalMode Automatic { get; }</span>
+		<span class='added added-property ' data-is-non-breaking>public override Java.Interop.JniPeerMembers JniPeerMembers { get; }</span>
+		<span class='added added-property ' data-is-non-breaking>protected override IntPtr ThresholdClass { get; }</span>
+		<span class='added added-property ' data-is-non-breaking>protected override System.Type ThresholdType { get; }</span>
+		<span class='added added-property ' data-is-non-breaking>public static RoomDatabase.JournalMode Truncate { get; }</span>
+		<span class='added added-property ' data-is-non-breaking>public static RoomDatabase.JournalMode WriteAheadLogging { get; }</span>
+		// methods
+		<span class='added added-method ' data-is-non-breaking>public static RoomDatabase.JournalMode ValueOf (string name);</span>
+		<span class='added added-method ' data-is-non-breaking>public static RoomDatabase.JournalMode[] Values ();</span>
+	}
+	public class MigrationContainer : Java.Lang.Object, Android.Runtime.IJavaObject, Java.Interop.IJavaPeerable, System.IDisposable {
+		// constructors
+		<span class='added added-constructor ' data-is-non-breaking>public RoomDatabase.MigrationContainer ();</span>
+		<span class='added added-constructor ' data-is-non-breaking>protected RoomDatabase.MigrationContainer (IntPtr javaReference, Android.Runtime.JniHandleOwnership transfer);</span>
+		// properties
+		<span class='added added-property ' data-is-non-breaking>public override Java.Interop.JniPeerMembers JniPeerMembers { get; }</span>
+		<span class='added added-property ' data-is-non-breaking>protected override IntPtr ThresholdClass { get; }</span>
+		<span class='added added-property ' data-is-non-breaking>protected override System.Type ThresholdType { get; }</span>
+		// methods
+		<span class='added added-method ' data-is-non-breaking>public virtual void AddMigrations (Migration.Migration[] migrations);</span>
+		<span class='added added-method ' data-is-non-breaking>public virtual System.Collections.Generic.IList&lt;Migration.Migration&gt; FindMigrationPath (int start, int end);</span>
+	}
+}
+</pre>
+</div> <!-- end type RoomDatabase -->
+<div> <!-- start type RoomMasterTable -->
+<h3>New Type Android.Arch.Persistence.Room.RoomMasterTable</h3>
+<pre class='added' data-is-non-breaking>
+public class RoomMasterTable : Java.Lang.Object, Android.Runtime.IJavaObject, Java.Interop.IJavaPeerable, System.IDisposable {
+	// constructors
+	<span class='added added-constructor ' data-is-non-breaking>public RoomMasterTable ();</span>
+	<span class='added added-constructor ' data-is-non-breaking>protected RoomMasterTable (IntPtr javaReference, Android.Runtime.JniHandleOwnership transfer);</span>
+	// fields
+	<span class='added added-field ' data-is-non-breaking>public static const string CreateQuery = "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)";</span>
+	<span class='added added-field ' data-is-non-breaking>public static const string DefaultId = "42";</span>
+	<span class='added added-field ' data-is-non-breaking>public static const string Name = "room_master_table";</span>
+	<span class='added added-field ' data-is-non-breaking>public static const string ReadQuery = "SELECT identity_hash FROM room_master_table WHERE id = 42 LIMIT 1";</span>
+	<span class='added added-field ' data-is-non-breaking>public static const string TableName = "room_master_table";</span>
+	// properties
+	<span class='added added-property ' data-is-non-breaking>public override Java.Interop.JniPeerMembers JniPeerMembers { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>protected override IntPtr ThresholdClass { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>protected override System.Type ThresholdType { get; }</span>
+	// methods
+	<span class='added added-method ' data-is-non-breaking>public static string CreateInsertQuery (string hash);</span>
+}
+</pre>
+</div> <!-- end type RoomMasterTable -->
+<div> <!-- start type RoomOpenHelper -->
+<h3>New Type Android.Arch.Persistence.Room.RoomOpenHelper</h3>
+<pre class='added' data-is-non-breaking>
+public class RoomOpenHelper : Android.Arch.Persistence.Db.SupportSQLiteOpenHelperCallback, Android.Runtime.IJavaObject, Java.Interop.IJavaPeerable, System.IDisposable {
+	// constructors
+	<span class='added added-constructor ' data-is-non-breaking>protected RoomOpenHelper (IntPtr javaReference, Android.Runtime.JniHandleOwnership transfer);</span>
+	<span class='added added-constructor ' data-is-non-breaking>public RoomOpenHelper (DatabaseConfiguration configuration, RoomOpenHelper.HelperDelegate delegate, string legacyHash);</span>
+	<span class='added added-constructor ' data-is-non-breaking>public RoomOpenHelper (DatabaseConfiguration configuration, RoomOpenHelper.HelperDelegate delegate, string identityHash, string legacyHash);</span>
+	// properties
+	<span class='added added-property ' data-is-non-breaking>public override Java.Interop.JniPeerMembers JniPeerMembers { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>protected override IntPtr ThresholdClass { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>protected override System.Type ThresholdType { get; }</span>
+	// methods
+	<span class='added added-method ' data-is-non-breaking>public override void OnCreate (Android.Arch.Persistence.Db.ISupportSQLiteDatabase db);</span>
+	<span class='added added-method ' data-is-non-breaking>public override void OnUpgrade (Android.Arch.Persistence.Db.ISupportSQLiteDatabase db, int oldVersion, int newVersion);</span>
+
+	// inner types
+	public abstract class HelperDelegate : Java.Lang.Object, Android.Runtime.IJavaObject, Java.Interop.IJavaPeerable, System.IDisposable {
+		// constructors
+		<span class='added added-constructor ' data-is-non-breaking>public RoomOpenHelper.HelperDelegate (int version);</span>
+		<span class='added added-constructor ' data-is-non-breaking>protected RoomOpenHelper.HelperDelegate (IntPtr javaReference, Android.Runtime.JniHandleOwnership transfer);</span>
+		// properties
+		<span class='added added-property ' data-is-non-breaking>public override Java.Interop.JniPeerMembers JniPeerMembers { get; }</span>
+		<span class='added added-property ' data-is-non-breaking>protected override IntPtr ThresholdClass { get; }</span>
+		<span class='added added-property ' data-is-non-breaking>protected override System.Type ThresholdType { get; }</span>
+		<span class='added added-property ' data-is-non-breaking>public int Version { get; set; }</span>
+		// methods
+		<span class='added added-method ' data-is-non-breaking>protected virtual void CreateAllTables (Android.Arch.Persistence.Db.ISupportSQLiteDatabase p0);</span>
+		<span class='added added-method ' data-is-non-breaking>protected virtual void DropAllTables (Android.Arch.Persistence.Db.ISupportSQLiteDatabase p0);</span>
+		<span class='added added-method ' data-is-non-breaking>protected virtual void OnCreate (Android.Arch.Persistence.Db.ISupportSQLiteDatabase p0);</span>
+		<span class='added added-method ' data-is-non-breaking>protected virtual void OnOpen (Android.Arch.Persistence.Db.ISupportSQLiteDatabase p0);</span>
+		<span class='added added-method ' data-is-non-breaking>protected virtual void ValidateMigration (Android.Arch.Persistence.Db.ISupportSQLiteDatabase p0);</span>
+	}
+}
+</pre>
+</div> <!-- end type RoomOpenHelper -->
+<div> <!-- start type RoomSQLiteQuery -->
+<h3>New Type Android.Arch.Persistence.Room.RoomSQLiteQuery</h3>
+<pre class='added' data-is-non-breaking>
+public class RoomSQLiteQuery : Java.Lang.Object, Android.Arch.Persistence.Db.ISupportSQLiteProgram, Android.Arch.Persistence.Db.ISupportSQLiteQuery, Android.Runtime.IJavaObject, Java.IO.ICloseable, Java.Interop.IJavaPeerable, System.IDisposable {
+	// constructors
+	<span class='added added-constructor ' data-is-non-breaking>protected RoomSQLiteQuery (IntPtr javaReference, Android.Runtime.JniHandleOwnership transfer);</span>
+	// properties
+	<span class='added added-property ' data-is-non-breaking>public virtual int ArgCount { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>public override Java.Interop.JniPeerMembers JniPeerMembers { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>public virtual string Sql { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>protected override IntPtr ThresholdClass { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>protected override System.Type ThresholdType { get; }</span>
+	// methods
+	<span class='added added-method ' data-is-non-breaking>public static RoomSQLiteQuery Acquire (string query, int argumentCount);</span>
+	<span class='added added-method ' data-is-non-breaking>public virtual void BindBlob (int index, byte[] value);</span>
+	<span class='added added-method ' data-is-non-breaking>public virtual void BindDouble (int index, double value);</span>
+	<span class='added added-method ' data-is-non-breaking>public virtual void BindLong (int index, long value);</span>
+	<span class='added added-method ' data-is-non-breaking>public virtual void BindNull (int index);</span>
+	<span class='added added-method ' data-is-non-breaking>public virtual void BindString (int index, string value);</span>
+	<span class='added added-method ' data-is-non-breaking>public virtual void BindTo (Android.Arch.Persistence.Db.ISupportSQLiteProgram program);</span>
+	<span class='added added-method ' data-is-non-breaking>public virtual void ClearBindings ();</span>
+	<span class='added added-method ' data-is-non-breaking>public virtual void Close ();</span>
+	<span class='added added-method ' data-is-non-breaking>public virtual void CopyArgumentsFrom (RoomSQLiteQuery other);</span>
+	<span class='added added-method ' data-is-non-breaking>public static RoomSQLiteQuery CopyFrom (Android.Arch.Persistence.Db.ISupportSQLiteQuery supportSQLiteQuery);</span>
+	<span class='added added-method ' data-is-non-breaking>public virtual void Release ();</span>
+}
+</pre>
+</div> <!-- end type RoomSQLiteQuery -->
+<div> <!-- start type RoomWarnings -->
+<h3>New Type Android.Arch.Persistence.Room.RoomWarnings</h3>
+<pre class='added' data-is-non-breaking>
+public class RoomWarnings : Java.Lang.Object, Android.Runtime.IJavaObject, Java.Interop.IJavaPeerable, System.IDisposable {
+	// constructors
+	<span class='added added-constructor ' data-is-non-breaking>public RoomWarnings ();</span>
+	<span class='added added-constructor ' data-is-non-breaking>protected RoomWarnings (IntPtr javaReference, Android.Runtime.JniHandleOwnership transfer);</span>
+	// fields
+	<span class='added added-field ' data-is-non-breaking>public static const string CannotCreateVerificationDatabase = "ROOM_CANNOT_CREATE_VERIFICATION_DATABASE";</span>
+	<span class='added added-field ' data-is-non-breaking>public static const string CursorMismatch = "ROOM_CURSOR_MISMATCH";</span>
+	<span class='added added-field ' data-is-non-breaking>public static const string DefaultConstructor = "ROOM_DEFAULT_CONSTRUCTOR";</span>
+	<span class='added added-field ' data-is-non-breaking>public static const string IndexFromEmbeddedEntityIsDropped = "ROOM_EMBEDDED_ENTITY_INDEX_IS_DROPPED";</span>
+	<span class='added added-field ' data-is-non-breaking>public static const string IndexFromEmbeddedFieldIsDropped = "ROOM_EMBEDDED_INDEX_IS_DROPPED";</span>
+	<span class='added added-field ' data-is-non-breaking>public static const string IndexFromParentFieldIsDropped = "ROOM_PARENT_FIELD_INDEX_IS_DROPPED";</span>
+	<span class='added added-field ' data-is-non-breaking>public static const string IndexFromParentIsDropped = "ROOM_PARENT_INDEX_IS_DROPPED";</span>
+	<span class='added added-field ' data-is-non-breaking>public static const string MissingIndexOnForeignKeyChild = "ROOM_MISSING_FOREIGN_KEY_CHILD_INDEX";</span>
+	<span class='added added-field ' data-is-non-breaking>public static const string MissingJavaTmpDir = "ROOM_MISSING_JAVA_TMP_DIR";</span>
+	<span class='added added-field ' data-is-non-breaking>public static const string MissingSchemaLocation = "ROOM_MISSING_SCHEMA_LOCATION";</span>
+	<span class='added added-field ' data-is-non-breaking>public static const string PrimaryKeyFromEmbeddedIsDropped = "ROOM_EMBEDDED_PRIMARY_KEY_IS_DROPPED";</span>
+	<span class='added added-field ' data-is-non-breaking>public static const string RelationQueryWithoutTransaction = "ROOM_RELATION_QUERY_WITHOUT_TRANSACTION";</span>
+	<span class='added added-field ' data-is-non-breaking>public static const string RelationTypeMismatch = "ROOM_RELATION_TYPE_MISMATCH";</span>
+	// properties
+	<span class='added added-property ' data-is-non-breaking>public override Java.Interop.JniPeerMembers JniPeerMembers { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>protected override IntPtr ThresholdClass { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>protected override System.Type ThresholdType { get; }</span>
+}
+</pre>
+</div> <!-- end type RoomWarnings -->
+<div> <!-- start type SharedSQLiteStatement -->
+<h3>New Type Android.Arch.Persistence.Room.SharedSQLiteStatement</h3>
+<pre class='added' data-is-non-breaking>
+public abstract class SharedSQLiteStatement : Java.Lang.Object, Android.Runtime.IJavaObject, Java.Interop.IJavaPeerable, System.IDisposable {
+	// constructors
+	<span class='added added-constructor ' data-is-non-breaking>public SharedSQLiteStatement (RoomDatabase database);</span>
+	<span class='added added-constructor ' data-is-non-breaking>protected SharedSQLiteStatement (IntPtr javaReference, Android.Runtime.JniHandleOwnership transfer);</span>
+	// properties
+	<span class='added added-property ' data-is-non-breaking>public override Java.Interop.JniPeerMembers JniPeerMembers { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>protected override IntPtr ThresholdClass { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>protected override System.Type ThresholdType { get; }</span>
+	// methods
+	<span class='added added-method ' data-is-non-breaking>public virtual Android.Arch.Persistence.Db.ISupportSQLiteStatement Acquire ();</span>
+	<span class='added added-method ' data-is-non-breaking>protected virtual void AssertNotMainThread ();</span>
+	<span class='added added-method ' data-is-non-breaking>protected virtual string CreateQuery ();</span>
+	<span class='added added-method ' data-is-non-breaking>public virtual void Release (Android.Arch.Persistence.Db.ISupportSQLiteStatement statement);</span>
+}
+</pre>
+</div> <!-- end type SharedSQLiteStatement -->
+<div> <!-- start type SkipQueryVerificationAttribute -->
+<h3>New Type Android.Arch.Persistence.Room.SkipQueryVerificationAttribute</h3>
+<pre class='added' data-is-non-breaking>
+public class SkipQueryVerificationAttribute : System.Attribute {
+	// constructors
+	<span class='added added-constructor ' data-is-non-breaking>public SkipQueryVerificationAttribute ();</span>
+}
+</pre>
+</div> <!-- end type SkipQueryVerificationAttribute -->
+<div> <!-- start type TransactionAttribute -->
+<h3>New Type Android.Arch.Persistence.Room.TransactionAttribute</h3>
+<pre class='added' data-is-non-breaking>
+public class TransactionAttribute : System.Attribute {
+	// constructors
+	<span class='added added-constructor ' data-is-non-breaking>public TransactionAttribute ();</span>
+}
+</pre>
+</div> <!-- end type TransactionAttribute -->
+<div> <!-- start type TypeConverterAttribute -->
+<h3>New Type Android.Arch.Persistence.Room.TypeConverterAttribute</h3>
+<pre class='added' data-is-non-breaking>
+public class TypeConverterAttribute : System.Attribute {
+	// constructors
+	<span class='added added-constructor ' data-is-non-breaking>public TypeConverterAttribute ();</span>
+}
+</pre>
+</div> <!-- end type TypeConverterAttribute -->
+<div> <!-- start type TypeConvertersAttribute -->
+<h3>New Type Android.Arch.Persistence.Room.TypeConvertersAttribute</h3>
+<pre class='added' data-is-non-breaking>
+public class TypeConvertersAttribute : System.Attribute {
+	// constructors
+	<span class='added added-constructor ' data-is-non-breaking>public TypeConvertersAttribute ();</span>
+	// properties
+	<span class='added added-property ' data-is-non-breaking>public Java.Lang.Class[] Value { get; set; }</span>
+}
+</pre>
+</div> <!-- end type TypeConvertersAttribute -->
+<div> <!-- start type UpdateAttribute -->
+<h3>New Type Android.Arch.Persistence.Room.UpdateAttribute</h3>
+<pre class='added' data-is-non-breaking>
+public class UpdateAttribute : System.Attribute {
+	// constructors
+	<span class='added added-constructor ' data-is-non-breaking>public UpdateAttribute ();</span>
+	// properties
+	<span class='added added-property ' data-is-non-breaking>public int OnConflict { get; set; }</span>
+}
+</pre>
+</div> <!-- end type UpdateAttribute -->
+</div> <!-- end namespace Android.Arch.Persistence.Room -->
+<!-- start namespace Android.Arch.Persistence.Room.Migration --> <div>
+<h2>New Namespace Android.Arch.Persistence.Room.Migration</h2>
+<div> <!-- start type Migration -->
+<h3>New Type Android.Arch.Persistence.Room.Migration.Migration</h3>
+<pre class='added' data-is-non-breaking>
+public abstract class Migration : Java.Lang.Object, Android.Runtime.IJavaObject, Java.Interop.IJavaPeerable, System.IDisposable {
+	// constructors
+	<span class='added added-constructor ' data-is-non-breaking>public Migration (int startVersion, int endVersion);</span>
+	<span class='added added-constructor ' data-is-non-breaking>protected Migration (IntPtr javaReference, Android.Runtime.JniHandleOwnership transfer);</span>
+	// properties
+	<span class='added added-property ' data-is-non-breaking>public int EndVersion { get; set; }</span>
+	<span class='added added-property ' data-is-non-breaking>public override Java.Interop.JniPeerMembers JniPeerMembers { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>public int StartVersion { get; set; }</span>
+	<span class='added added-property ' data-is-non-breaking>protected override IntPtr ThresholdClass { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>protected override System.Type ThresholdType { get; }</span>
+	// methods
+	<span class='added added-method ' data-is-non-breaking>public virtual void Migrate (Android.Arch.Persistence.Db.ISupportSQLiteDatabase p0);</span>
+}
+</pre>
+</div> <!-- end type Migration -->
+</div> <!-- end namespace Android.Arch.Persistence.Room.Migration -->
+<!-- start namespace Android.Arch.Persistence.Room.Util --> <div>
+<h2>New Namespace Android.Arch.Persistence.Room.Util</h2>
+<div> <!-- start type StringUtil -->
+<h3>New Type Android.Arch.Persistence.Room.Util.StringUtil</h3>
+<pre class='added' data-is-non-breaking>
+public class StringUtil : Java.Lang.Object, Android.Runtime.IJavaObject, Java.Interop.IJavaPeerable, System.IDisposable {
+	// constructors
+	<span class='added added-constructor ' data-is-non-breaking>public StringUtil ();</span>
+	<span class='added added-constructor ' data-is-non-breaking>protected StringUtil (IntPtr javaReference, Android.Runtime.JniHandleOwnership transfer);</span>
+	// properties
+	<span class='added added-property ' data-is-non-breaking>public static System.Collections.Generic.IList&lt;string&gt; EmptyStringArray { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>public override Java.Interop.JniPeerMembers JniPeerMembers { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>protected override IntPtr ThresholdClass { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>protected override System.Type ThresholdType { get; }</span>
+	// methods
+	<span class='added added-method ' data-is-non-breaking>public static void AppendPlaceholders (Java.Lang.StringBuilder builder, int count);</span>
+	<span class='added added-method ' data-is-non-breaking>public static string JoinIntoString (System.Collections.Generic.IList&lt;Java.Lang.Integer&gt; input);</span>
+	<span class='added added-method ' data-is-non-breaking>public static Java.Lang.StringBuilder NewStringBuilder ();</span>
+	<span class='added added-method ' data-is-non-breaking>public static System.Collections.Generic.IList&lt;Java.Lang.Integer&gt; SplitToIntList (string input);</span>
+}
+</pre>
+</div> <!-- end type StringUtil -->
+<div> <!-- start type TableInfo -->
+<h3>New Type Android.Arch.Persistence.Room.Util.TableInfo</h3>
+<pre class='added' data-is-non-breaking>
+public class TableInfo : Java.Lang.Object, Android.Runtime.IJavaObject, Java.Interop.IJavaPeerable, System.IDisposable {
+	// constructors
+	<span class='added added-constructor ' data-is-non-breaking>protected TableInfo (IntPtr javaReference, Android.Runtime.JniHandleOwnership transfer);</span>
+	<span class='added added-constructor ' data-is-non-breaking>public TableInfo (string name, System.Collections.Generic.IDictionary&lt;System.String,Android.Arch.Persistence.Room.Util.TableInfo.Column&gt; columns, System.Collections.Generic.ICollection&lt;TableInfo.ForeignKey&gt; foreignKeys);</span>
+	<span class='added added-constructor ' data-is-non-breaking>public TableInfo (string name, System.Collections.Generic.IDictionary&lt;System.String,Android.Arch.Persistence.Room.Util.TableInfo.Column&gt; columns, System.Collections.Generic.ICollection&lt;TableInfo.ForeignKey&gt; foreignKeys, System.Collections.Generic.ICollection&lt;TableInfo.Index&gt; indices);</span>
+	// properties
+	<span class='added added-property ' data-is-non-breaking>public System.Collections.IDictionary Columns { get; set; }</span>
+	<span class='added added-property ' data-is-non-breaking>public System.Collections.ICollection ForeignKeys { get; set; }</span>
+	<span class='added added-property ' data-is-non-breaking>public System.Collections.ICollection Indices { get; set; }</span>
+	<span class='added added-property ' data-is-non-breaking>public override Java.Interop.JniPeerMembers JniPeerMembers { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>public string Name { get; set; }</span>
+	<span class='added added-property ' data-is-non-breaking>protected override IntPtr ThresholdClass { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>protected override System.Type ThresholdType { get; }</span>
+	// methods
+	<span class='added added-method ' data-is-non-breaking>public static TableInfo Read (Android.Arch.Persistence.Db.ISupportSQLiteDatabase database, string tableName);</span>
+
+	// inner types
+	public class Column : Java.Lang.Object, Android.Runtime.IJavaObject, Java.Interop.IJavaPeerable, System.IDisposable {
+		// constructors
+		<span class='added added-constructor ' data-is-non-breaking>protected TableInfo.Column (IntPtr javaReference, Android.Runtime.JniHandleOwnership transfer);</span>
+		<span class='added added-constructor ' data-is-non-breaking>public TableInfo.Column (string name, string type, bool notNull, int primaryKeyPosition);</span>
+		// properties
+		<span class='added added-property ' data-is-non-breaking>public int Affinity { get; set; }</span>
+		<span class='added added-property ' data-is-non-breaking>public virtual bool IsPrimaryKey { get; }</span>
+		<span class='added added-property ' data-is-non-breaking>public override Java.Interop.JniPeerMembers JniPeerMembers { get; }</span>
+		<span class='added added-property ' data-is-non-breaking>public string Name { get; set; }</span>
+		<span class='added added-property ' data-is-non-breaking>public bool NotNull { get; set; }</span>
+		<span class='added added-property ' data-is-non-breaking>public int PrimaryKeyPosition { get; set; }</span>
+		<span class='added added-property ' data-is-non-breaking>protected override IntPtr ThresholdClass { get; }</span>
+		<span class='added added-property ' data-is-non-breaking>protected override System.Type ThresholdType { get; }</span>
+		<span class='added added-property ' data-is-non-breaking>public string Type { get; set; }</span>
+	}
+	public class ForeignKey : Java.Lang.Object, Android.Runtime.IJavaObject, Java.Interop.IJavaPeerable, System.IDisposable {
+		// constructors
+		<span class='added added-constructor ' data-is-non-breaking>protected TableInfo.ForeignKey (IntPtr javaReference, Android.Runtime.JniHandleOwnership transfer);</span>
+		<span class='added added-constructor ' data-is-non-breaking>public TableInfo.ForeignKey (string referenceTable, string onDelete, string onUpdate, System.Collections.Generic.IList&lt;string&gt; columnNames, System.Collections.Generic.IList&lt;string&gt; referenceColumnNames);</span>
+		// properties
+		<span class='added added-property ' data-is-non-breaking>public System.Collections.IList ColumnNames { get; set; }</span>
+		<span class='added added-property ' data-is-non-breaking>public override Java.Interop.JniPeerMembers JniPeerMembers { get; }</span>
+		<span class='added added-property ' data-is-non-breaking>public string OnDelete { get; set; }</span>
+		<span class='added added-property ' data-is-non-breaking>public string OnUpdate { get; set; }</span>
+		<span class='added added-property ' data-is-non-breaking>public System.Collections.IList ReferenceColumnNames { get; set; }</span>
+		<span class='added added-property ' data-is-non-breaking>public string ReferenceTable { get; set; }</span>
+		<span class='added added-property ' data-is-non-breaking>protected override IntPtr ThresholdClass { get; }</span>
+		<span class='added added-property ' data-is-non-breaking>protected override System.Type ThresholdType { get; }</span>
+	}
+	public class ForeignKeyWithSequence : Java.Lang.Object, Android.Runtime.IJavaObject, Java.Interop.IJavaPeerable, System.IDisposable {
+		// constructors
+		<span class='added added-constructor ' data-is-non-breaking>protected TableInfo.ForeignKeyWithSequence (IntPtr javaReference, Android.Runtime.JniHandleOwnership transfer);</span>
+		// properties
+		<span class='added added-property ' data-is-non-breaking>public override Java.Interop.JniPeerMembers JniPeerMembers { get; }</span>
+		<span class='added added-property ' data-is-non-breaking>protected override IntPtr ThresholdClass { get; }</span>
+		<span class='added added-property ' data-is-non-breaking>protected override System.Type ThresholdType { get; }</span>
+	}
+	public class Index : Java.Lang.Object, Android.Runtime.IJavaObject, Java.Interop.IJavaPeerable, System.IDisposable {
+		// constructors
+		<span class='added added-constructor ' data-is-non-breaking>protected TableInfo.Index (IntPtr javaReference, Android.Runtime.JniHandleOwnership transfer);</span>
+		<span class='added added-constructor ' data-is-non-breaking>public TableInfo.Index (string name, bool unique, System.Collections.Generic.IList&lt;string&gt; columns);</span>
+		// fields
+		<span class='added added-field ' data-is-non-breaking>public static const string DefaultPrefix = "index_";</span>
+		// properties
+		<span class='added added-property ' data-is-non-breaking>public System.Collections.IList Columns { get; set; }</span>
+		<span class='added added-property ' data-is-non-breaking>public override Java.Interop.JniPeerMembers JniPeerMembers { get; }</span>
+		<span class='added added-property ' data-is-non-breaking>public string Name { get; set; }</span>
+		<span class='added added-property ' data-is-non-breaking>protected override IntPtr ThresholdClass { get; }</span>
+		<span class='added added-property ' data-is-non-breaking>protected override System.Type ThresholdType { get; }</span>
+		<span class='added added-property ' data-is-non-breaking>public bool Unique { get; set; }</span>
+	}
+}
+</pre>
+</div> <!-- end type TableInfo -->
+</div> <!-- end namespace Android.Arch.Persistence.Room.Util -->
 <!-- start namespace Android.Support.Design.Animation --> <div>
 <h2>New Namespace Android.Support.Design.Animation</h2>
 <div> <!-- start type AnimationUtils -->
@@ -10006,6 +11219,772 @@ public class WebkitToCompatConverter : Java.Lang.Object, Android.Runtime.IJavaOb
 </pre>
 </div> <!-- end type WebkitToCompatConverter -->
 </div> <!-- end namespace AndroidX.WebKit.Internal -->
+<!-- start namespace AndroidX.Work --> <div>
+<h2>New Namespace AndroidX.Work</h2>
+<div> <!-- start type ArrayCreatingInputMerger -->
+<h3>New Type AndroidX.Work.ArrayCreatingInputMerger</h3>
+<pre class='added' data-is-non-breaking>
+public sealed class ArrayCreatingInputMerger : AndroidX.Work.InputMerger, Android.Runtime.IJavaObject, Java.Interop.IJavaPeerable, System.IDisposable {
+	// constructors
+	<span class='added added-constructor ' data-is-non-breaking>public ArrayCreatingInputMerger ();</span>
+	// properties
+	<span class='added added-property ' data-is-non-breaking>public override Java.Interop.JniPeerMembers JniPeerMembers { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>protected override IntPtr ThresholdClass { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>protected override System.Type ThresholdType { get; }</span>
+	// methods
+	<span class='added added-method ' data-is-non-breaking>public override Data Merge (System.Collections.Generic.IList&lt;Data&gt; inputs);</span>
+}
+</pre>
+</div> <!-- end type ArrayCreatingInputMerger -->
+<div> <!-- start type BackoffPolicy -->
+<h3>New Type AndroidX.Work.BackoffPolicy</h3>
+<pre class='added' data-is-non-breaking>
+public sealed class BackoffPolicy : Java.Lang.Enum, Android.Runtime.IJavaObject, Java.IO.ISerializable, Java.Interop.IJavaPeerable, Java.Lang.IComparable, System.IDisposable {
+	// properties
+	<span class='added added-property ' data-is-non-breaking>public static BackoffPolicy Exponential { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>public override Java.Interop.JniPeerMembers JniPeerMembers { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>public static BackoffPolicy Linear { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>protected override IntPtr ThresholdClass { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>protected override System.Type ThresholdType { get; }</span>
+	// methods
+	<span class='added added-method ' data-is-non-breaking>public static BackoffPolicy ValueOf (string name);</span>
+	<span class='added added-method ' data-is-non-breaking>public static BackoffPolicy[] Values ();</span>
+}
+</pre>
+</div> <!-- end type BackoffPolicy -->
+<div> <!-- start type Configuration -->
+<h3>New Type AndroidX.Work.Configuration</h3>
+<pre class='added' data-is-non-breaking>
+public sealed class Configuration : Java.Lang.Object, Android.Runtime.IJavaObject, Java.Interop.IJavaPeerable, System.IDisposable {
+	// fields
+	<span class='added added-field ' data-is-non-breaking>public static const int MinSchedulerLimit;</span>
+	// properties
+	<span class='added added-property ' data-is-non-breaking>public Java.Util.Concurrent.IExecutor Executor { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>public override Java.Interop.JniPeerMembers JniPeerMembers { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>public int MaxJobSchedulerId { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>public int MaxSchedulerLimit { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>public int MinJobSchedulerId { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>public int MinimumLoggingLevel { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>protected override IntPtr ThresholdClass { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>protected override System.Type ThresholdType { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>public WorkerFactory WorkerFactory { get; }</span>
+
+	// inner types
+	public sealed class Builder : Java.Lang.Object, Android.Runtime.IJavaObject, Java.Interop.IJavaPeerable, System.IDisposable {
+		// constructors
+		<span class='added added-constructor ' data-is-non-breaking>public Configuration.Builder ();</span>
+		// properties
+		<span class='added added-property ' data-is-non-breaking>public override Java.Interop.JniPeerMembers JniPeerMembers { get; }</span>
+		<span class='added added-property ' data-is-non-breaking>protected override IntPtr ThresholdClass { get; }</span>
+		<span class='added added-property ' data-is-non-breaking>protected override System.Type ThresholdType { get; }</span>
+		// methods
+		<span class='added added-method ' data-is-non-breaking>public Configuration Build ();</span>
+		<span class='added added-method ' data-is-non-breaking>public Configuration.Builder SetExecutor (Java.Util.Concurrent.IExecutor executor);</span>
+		<span class='added added-method ' data-is-non-breaking>public Configuration.Builder SetJobSchedulerJobIdRange (int minJobSchedulerId, int maxJobSchedulerId);</span>
+		<span class='added added-method ' data-is-non-breaking>public Configuration.Builder SetMaxSchedulerLimit (int maxSchedulerLimit);</span>
+		<span class='added added-method ' data-is-non-breaking>public Configuration.Builder SetMinimumLoggingLevel (int loggingLevel);</span>
+		<span class='added added-method ' data-is-non-breaking>public Configuration.Builder SetWorkerFactory (WorkerFactory workerFactory);</span>
+	}
+}
+</pre>
+</div> <!-- end type Configuration -->
+<div> <!-- start type Constraints -->
+<h3>New Type AndroidX.Work.Constraints</h3>
+<pre class='added' data-is-non-breaking>
+public sealed class Constraints : Java.Lang.Object, Android.Runtime.IJavaObject, Java.Interop.IJavaPeerable, System.IDisposable {
+	// constructors
+	<span class='added added-constructor ' data-is-non-breaking>public Constraints ();</span>
+	<span class='added added-constructor ' data-is-non-breaking>public Constraints (Constraints other);</span>
+	// properties
+	<span class='added added-property ' data-is-non-breaking>public ContentUriTriggers ContentUriTriggers { get; set; }</span>
+	<span class='added added-property ' data-is-non-breaking>public bool HasContentUriTriggers { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>public override Java.Interop.JniPeerMembers JniPeerMembers { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>public static Constraints None { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>public NetworkType RequiredNetworkType { get; set; }</span>
+	<span class='added added-property ' data-is-non-breaking>protected override IntPtr ThresholdClass { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>protected override System.Type ThresholdType { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>public long TriggerContentUpdateDelay { get; set; }</span>
+	<span class='added added-property ' data-is-non-breaking>public long TriggerMaxContentDelay { get; set; }</span>
+	// methods
+	<span class='added added-method ' data-is-non-breaking>public bool RequiresBatteryNotLow ();</span>
+	<span class='added added-method ' data-is-non-breaking>public bool RequiresCharging ();</span>
+	<span class='added added-method ' data-is-non-breaking>public bool RequiresDeviceIdle ();</span>
+	<span class='added added-method ' data-is-non-breaking>public bool RequiresStorageNotLow ();</span>
+	<span class='added added-method ' data-is-non-breaking>public void SetRequiresBatteryNotLow (bool requiresBatteryNotLow);</span>
+	<span class='added added-method ' data-is-non-breaking>public void SetRequiresCharging (bool requiresCharging);</span>
+	<span class='added added-method ' data-is-non-breaking>public void SetRequiresDeviceIdle (bool requiresDeviceIdle);</span>
+	<span class='added added-method ' data-is-non-breaking>public void SetRequiresStorageNotLow (bool requiresStorageNotLow);</span>
+
+	// inner types
+	public sealed class Builder : Java.Lang.Object, Android.Runtime.IJavaObject, Java.Interop.IJavaPeerable, System.IDisposable {
+		// constructors
+		<span class='added added-constructor ' data-is-non-breaking>public Constraints.Builder ();</span>
+		// properties
+		<span class='added added-property ' data-is-non-breaking>public override Java.Interop.JniPeerMembers JniPeerMembers { get; }</span>
+		<span class='added added-property ' data-is-non-breaking>protected override IntPtr ThresholdClass { get; }</span>
+		<span class='added added-property ' data-is-non-breaking>protected override System.Type ThresholdType { get; }</span>
+		// methods
+		<span class='added added-method ' data-is-non-breaking>public Constraints.Builder AddContentUriTrigger (Android.Net.Uri uri, bool triggerForDescendants);</span>
+		<span class='added added-method ' data-is-non-breaking>public Constraints.Builder AddContentUriTrigger (System.Uri uri, bool triggerForDescendants);</span>
+		<span class='added added-method ' data-is-non-breaking>public Constraints Build ();</span>
+		<span class='added added-method ' data-is-non-breaking>public Constraints.Builder SetRequiredNetworkType (NetworkType networkType);</span>
+		<span class='added added-method ' data-is-non-breaking>public Constraints.Builder SetRequiresBatteryNotLow (bool requiresBatteryNotLow);</span>
+		<span class='added added-method ' data-is-non-breaking>public Constraints.Builder SetRequiresCharging (bool requiresCharging);</span>
+		<span class='added added-method ' data-is-non-breaking>public Constraints.Builder SetRequiresDeviceIdle (bool requiresDeviceIdle);</span>
+		<span class='added added-method ' data-is-non-breaking>public Constraints.Builder SetRequiresStorageNotLow (bool requiresStorageNotLow);</span>
+		<span class='added added-method ' data-is-non-breaking>public Constraints.Builder SetTriggerContentMaxDelay (System.TimeSpan duration);</span>
+		<span class='added added-method ' data-is-non-breaking>public Constraints.Builder SetTriggerContentMaxDelay (long duration, Java.Util.Concurrent.TimeUnit timeUnit);</span>
+		<span class='added added-method ' data-is-non-breaking>public Constraints.Builder SetTriggerContentUpdateDelay (System.TimeSpan duration);</span>
+		<span class='added added-method ' data-is-non-breaking>public Constraints.Builder SetTriggerContentUpdateDelay (long duration, Java.Util.Concurrent.TimeUnit timeUnit);</span>
+	}
+}
+</pre>
+</div> <!-- end type Constraints -->
+<div> <!-- start type ContentUriTriggers -->
+<h3>New Type AndroidX.Work.ContentUriTriggers</h3>
+<pre class='added' data-is-non-breaking>
+public sealed class ContentUriTriggers : Java.Lang.Object, Android.Runtime.IJavaObject, Java.Interop.IJavaPeerable, System.IDisposable {
+	// constructors
+	<span class='added added-constructor ' data-is-non-breaking>public ContentUriTriggers ();</span>
+	// properties
+	<span class='added added-property ' data-is-non-breaking>public override Java.Interop.JniPeerMembers JniPeerMembers { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>protected override IntPtr ThresholdClass { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>protected override System.Type ThresholdType { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>public System.Collections.Generic.ICollection&lt;ContentUriTriggers.Trigger&gt; Triggers { get; }</span>
+	// methods
+	<span class='added added-method ' data-is-non-breaking>public void Add (Android.Net.Uri uri, bool triggerForDescendants);</span>
+	<span class='added added-method ' data-is-non-breaking>public int Size ();</span>
+
+	// inner types
+	public sealed class Trigger : Java.Lang.Object, Android.Runtime.IJavaObject, Java.Interop.IJavaPeerable, System.IDisposable {
+		// properties
+		<span class='added added-property ' data-is-non-breaking>public override Java.Interop.JniPeerMembers JniPeerMembers { get; }</span>
+		<span class='added added-property ' data-is-non-breaking>protected override IntPtr ThresholdClass { get; }</span>
+		<span class='added added-property ' data-is-non-breaking>protected override System.Type ThresholdType { get; }</span>
+		<span class='added added-property ' data-is-non-breaking>public Android.Net.Uri Uri { get; }</span>
+		// methods
+		<span class='added added-method ' data-is-non-breaking>public bool ShouldTriggerForDescendants ();</span>
+	}
+}
+</pre>
+</div> <!-- end type ContentUriTriggers -->
+<div> <!-- start type Data -->
+<h3>New Type AndroidX.Work.Data</h3>
+<pre class='added' data-is-non-breaking>
+public sealed class Data : Java.Lang.Object, Android.Runtime.IJavaObject, Java.Interop.IJavaPeerable, System.IDisposable {
+	// constructors
+	<span class='added added-constructor ' data-is-non-breaking>public Data (Data other);</span>
+	// fields
+	<span class='added added-field ' data-is-non-breaking>public static const int MaxDataBytes;</span>
+	// properties
+	<span class='added added-property ' data-is-non-breaking>public static Data Empty { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>public override Java.Interop.JniPeerMembers JniPeerMembers { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>public System.Collections.Generic.IDictionary&lt;System.String,Java.Lang.Object&gt; KeyValueMap { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>protected override IntPtr ThresholdClass { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>protected override System.Type ThresholdType { get; }</span>
+	// methods
+	<span class='added added-method ' data-is-non-breaking>public static Data FromByteArray (byte[] bytes);</span>
+	<span class='added added-method ' data-is-non-breaking>public bool GetBoolean (string key, bool defaultValue);</span>
+	<span class='added added-method ' data-is-non-breaking>public bool[] GetBooleanArray (string key);</span>
+	<span class='added added-method ' data-is-non-breaking>public double GetDouble (string key, double defaultValue);</span>
+	<span class='added added-method ' data-is-non-breaking>public double[] GetDoubleArray (string key);</span>
+	<span class='added added-method ' data-is-non-breaking>public float GetFloat (string key, float defaultValue);</span>
+	<span class='added added-method ' data-is-non-breaking>public float[] GetFloatArray (string key);</span>
+	<span class='added added-method ' data-is-non-breaking>public int GetInt (string key, int defaultValue);</span>
+	<span class='added added-method ' data-is-non-breaking>public int[] GetIntArray (string key);</span>
+	<span class='added added-method ' data-is-non-breaking>public long GetLong (string key, long defaultValue);</span>
+	<span class='added added-method ' data-is-non-breaking>public long[] GetLongArray (string key);</span>
+	<span class='added added-method ' data-is-non-breaking>public string GetString (string key);</span>
+	<span class='added added-method ' data-is-non-breaking>public string[] GetStringArray (string key);</span>
+	<span class='added added-method ' data-is-non-breaking>public int Size ();</span>
+	<span class='added added-method ' data-is-non-breaking>public static byte[] ToByteArray (Data data);</span>
+
+	// inner types
+	public sealed class Builder : Java.Lang.Object, Android.Runtime.IJavaObject, Java.Interop.IJavaPeerable, System.IDisposable {
+		// constructors
+		<span class='added added-constructor ' data-is-non-breaking>public Data.Builder ();</span>
+		// properties
+		<span class='added added-property ' data-is-non-breaking>public override Java.Interop.JniPeerMembers JniPeerMembers { get; }</span>
+		<span class='added added-property ' data-is-non-breaking>protected override IntPtr ThresholdClass { get; }</span>
+		<span class='added added-property ' data-is-non-breaking>protected override System.Type ThresholdType { get; }</span>
+		// methods
+		<span class='added added-method ' data-is-non-breaking>public Data Build ();</span>
+		<span class='added added-method ' data-is-non-breaking>public Data.Builder Put (string key, Java.Lang.Object value);</span>
+		<span class='added added-method ' data-is-non-breaking>public Data.Builder PutAll (Data data);</span>
+		<span class='added added-method ' data-is-non-breaking>public Data.Builder PutAll (System.Collections.Generic.IDictionary&lt;System.String,Java.Lang.Object&gt; values);</span>
+		<span class='added added-method ' data-is-non-breaking>public Data.Builder PutBoolean (string key, bool value);</span>
+		<span class='added added-method ' data-is-non-breaking>public Data.Builder PutBooleanArray (string key, bool[] value);</span>
+		<span class='added added-method ' data-is-non-breaking>public Data.Builder PutDouble (string key, double value);</span>
+		<span class='added added-method ' data-is-non-breaking>public Data.Builder PutDoubleArray (string key, double[] value);</span>
+		<span class='added added-method ' data-is-non-breaking>public Data.Builder PutFloat (string key, float value);</span>
+		<span class='added added-method ' data-is-non-breaking>public Data.Builder PutFloatArray (string key, float[] value);</span>
+		<span class='added added-method ' data-is-non-breaking>public Data.Builder PutInt (string key, int value);</span>
+		<span class='added added-method ' data-is-non-breaking>public Data.Builder PutIntArray (string key, int[] value);</span>
+		<span class='added added-method ' data-is-non-breaking>public Data.Builder PutLong (string key, long value);</span>
+		<span class='added added-method ' data-is-non-breaking>public Data.Builder PutLongArray (string key, long[] value);</span>
+		<span class='added added-method ' data-is-non-breaking>public Data.Builder PutString (string key, string value);</span>
+		<span class='added added-method ' data-is-non-breaking>public Data.Builder PutStringArray (string key, string[] value);</span>
+	}
+}
+</pre>
+</div> <!-- end type Data -->
+<div> <!-- start type ExistingPeriodicWorkPolicy -->
+<h3>New Type AndroidX.Work.ExistingPeriodicWorkPolicy</h3>
+<pre class='added' data-is-non-breaking>
+public sealed class ExistingPeriodicWorkPolicy : Java.Lang.Enum, Android.Runtime.IJavaObject, Java.IO.ISerializable, Java.Interop.IJavaPeerable, Java.Lang.IComparable, System.IDisposable {
+	// properties
+	<span class='added added-property ' data-is-non-breaking>public override Java.Interop.JniPeerMembers JniPeerMembers { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>public static ExistingPeriodicWorkPolicy Keep { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>public static ExistingPeriodicWorkPolicy Replace { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>protected override IntPtr ThresholdClass { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>protected override System.Type ThresholdType { get; }</span>
+	// methods
+	<span class='added added-method ' data-is-non-breaking>public static ExistingPeriodicWorkPolicy ValueOf (string name);</span>
+	<span class='added added-method ' data-is-non-breaking>public static ExistingPeriodicWorkPolicy[] Values ();</span>
+}
+</pre>
+</div> <!-- end type ExistingPeriodicWorkPolicy -->
+<div> <!-- start type ExistingWorkPolicy -->
+<h3>New Type AndroidX.Work.ExistingWorkPolicy</h3>
+<pre class='added' data-is-non-breaking>
+public sealed class ExistingWorkPolicy : Java.Lang.Enum, Android.Runtime.IJavaObject, Java.IO.ISerializable, Java.Interop.IJavaPeerable, Java.Lang.IComparable, System.IDisposable {
+	// properties
+	<span class='added added-property ' data-is-non-breaking>public static ExistingWorkPolicy Append { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>public override Java.Interop.JniPeerMembers JniPeerMembers { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>public static ExistingWorkPolicy Keep { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>public static ExistingWorkPolicy Replace { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>protected override IntPtr ThresholdClass { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>protected override System.Type ThresholdType { get; }</span>
+	// methods
+	<span class='added added-method ' data-is-non-breaking>public static ExistingWorkPolicy ValueOf (string name);</span>
+	<span class='added added-method ' data-is-non-breaking>public static ExistingWorkPolicy[] Values ();</span>
+}
+</pre>
+</div> <!-- end type ExistingWorkPolicy -->
+<div> <!-- start type IOperation -->
+<h3>New Type AndroidX.Work.IOperation</h3>
+<pre class='added' data-is-non-breaking>
+public interface IOperation : Android.Runtime.IJavaObject, System.IDisposable {
+	// properties
+	<span class='added added-property ' data-is-non-breaking>public virtual Android.Arch.Lifecycle.LiveData State { get; }</span>
+}
+</pre>
+</div> <!-- end type IOperation -->
+<div> <!-- start type InputMerger -->
+<h3>New Type AndroidX.Work.InputMerger</h3>
+<pre class='added' data-is-non-breaking>
+public abstract class InputMerger : Java.Lang.Object, Android.Runtime.IJavaObject, Java.Interop.IJavaPeerable, System.IDisposable {
+	// constructors
+	<span class='added added-constructor ' data-is-non-breaking>public InputMerger ();</span>
+	<span class='added added-constructor ' data-is-non-breaking>protected InputMerger (IntPtr javaReference, Android.Runtime.JniHandleOwnership transfer);</span>
+	// properties
+	<span class='added added-property ' data-is-non-breaking>public override Java.Interop.JniPeerMembers JniPeerMembers { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>protected override IntPtr ThresholdClass { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>protected override System.Type ThresholdType { get; }</span>
+	// methods
+	<span class='added added-method ' data-is-non-breaking>public static InputMerger FromClassName (string className);</span>
+	<span class='added added-method ' data-is-non-breaking>public virtual Data Merge (System.Collections.Generic.IList&lt;Data&gt; p0);</span>
+}
+</pre>
+</div> <!-- end type InputMerger -->
+<div> <!-- start type ListenableWorker -->
+<h3>New Type AndroidX.Work.ListenableWorker</h3>
+<pre class='added' data-is-non-breaking>
+public abstract class ListenableWorker : Java.Lang.Object, Android.Runtime.IJavaObject, Java.Interop.IJavaPeerable, System.IDisposable {
+	// constructors
+	<span class='added added-constructor ' data-is-non-breaking>public ListenableWorker (Android.Content.Context appContext, WorkerParameters workerParams);</span>
+	<span class='added added-constructor ' data-is-non-breaking>protected ListenableWorker (IntPtr javaReference, Android.Runtime.JniHandleOwnership transfer);</span>
+	// properties
+	<span class='added added-property ' data-is-non-breaking>public Android.Content.Context ApplicationContext { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>public virtual Java.Util.Concurrent.IExecutor BackgroundExecutor { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>public Java.Util.UUID Id { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>public Data InputData { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>public bool IsStopped { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>public bool IsUsed { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>public override Java.Interop.JniPeerMembers JniPeerMembers { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>public Android.Net.Network Network { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>public int RunAttemptCount { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>public System.Collections.Generic.ICollection&lt;string&gt; Tags { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>protected override IntPtr ThresholdClass { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>protected override System.Type ThresholdType { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>public System.Collections.Generic.IList&lt;string&gt; TriggeredContentAuthorities { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>public System.Collections.Generic.IList&lt;Android.Net.Uri&gt; TriggeredContentUris { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>public virtual WorkerFactory WorkerFactory { get; }</span>
+	// methods
+	<span class='added added-method ' data-is-non-breaking>public virtual void OnStopped ();</span>
+	<span class='added added-method ' data-is-non-breaking>public void SetUsed ();</span>
+	<span class='added added-method ' data-is-non-breaking>public void Stop ();</span>
+
+	// inner types
+	public abstract class Result : Java.Lang.Object, Android.Runtime.IJavaObject, Java.Interop.IJavaPeerable, System.IDisposable {
+		// constructors
+		<span class='added added-constructor ' data-is-non-breaking>protected ListenableWorker.Result (IntPtr javaReference, Android.Runtime.JniHandleOwnership transfer);</span>
+		// properties
+		<span class='added added-property ' data-is-non-breaking>public override Java.Interop.JniPeerMembers JniPeerMembers { get; }</span>
+		<span class='added added-property ' data-is-non-breaking>protected override IntPtr ThresholdClass { get; }</span>
+		<span class='added added-property ' data-is-non-breaking>protected override System.Type ThresholdType { get; }</span>
+		// methods
+		<span class='added added-method ' data-is-non-breaking>public static ListenableWorker.Result InvokeFailure ();</span>
+		<span class='added added-method ' data-is-non-breaking>public static ListenableWorker.Result InvokeFailure (Data outputData);</span>
+		<span class='added added-method ' data-is-non-breaking>public static ListenableWorker.Result InvokeRetry ();</span>
+		<span class='added added-method ' data-is-non-breaking>public static ListenableWorker.Result InvokeSuccess ();</span>
+		<span class='added added-method ' data-is-non-breaking>public static ListenableWorker.Result InvokeSuccess (Data outputData);</span>
+
+		// inner types
+		public sealed class Failure : AndroidX.Work.ListenableWorker+Result, Android.Runtime.IJavaObject, Java.Interop.IJavaPeerable, System.IDisposable {
+			// constructors
+			<span class='added added-constructor ' data-is-non-breaking>public ListenableWorker.Result.Failure ();</span>
+			<span class='added added-constructor ' data-is-non-breaking>public ListenableWorker.Result.Failure (Data outputData);</span>
+			// properties
+			<span class='added added-property ' data-is-non-breaking>public override Java.Interop.JniPeerMembers JniPeerMembers { get; }</span>
+			<span class='added added-property ' data-is-non-breaking>public Data OutputData { get; }</span>
+			<span class='added added-property ' data-is-non-breaking>protected override IntPtr ThresholdClass { get; }</span>
+			<span class='added added-property ' data-is-non-breaking>protected override System.Type ThresholdType { get; }</span>
+		}
+		public sealed class Retry : AndroidX.Work.ListenableWorker+Result, Android.Runtime.IJavaObject, Java.Interop.IJavaPeerable, System.IDisposable {
+			// constructors
+			<span class='added added-constructor ' data-is-non-breaking>public ListenableWorker.Result.Retry ();</span>
+			// properties
+			<span class='added added-property ' data-is-non-breaking>public override Java.Interop.JniPeerMembers JniPeerMembers { get; }</span>
+			<span class='added added-property ' data-is-non-breaking>protected override IntPtr ThresholdClass { get; }</span>
+			<span class='added added-property ' data-is-non-breaking>protected override System.Type ThresholdType { get; }</span>
+		}
+		public sealed class Success : AndroidX.Work.ListenableWorker+Result, Android.Runtime.IJavaObject, Java.Interop.IJavaPeerable, System.IDisposable {
+			// constructors
+			<span class='added added-constructor ' data-is-non-breaking>public ListenableWorker.Result.Success ();</span>
+			<span class='added added-constructor ' data-is-non-breaking>public ListenableWorker.Result.Success (Data outputData);</span>
+			// properties
+			<span class='added added-property ' data-is-non-breaking>public override Java.Interop.JniPeerMembers JniPeerMembers { get; }</span>
+			<span class='added added-property ' data-is-non-breaking>public Data OutputData { get; }</span>
+			<span class='added added-property ' data-is-non-breaking>protected override IntPtr ThresholdClass { get; }</span>
+			<span class='added added-property ' data-is-non-breaking>protected override System.Type ThresholdType { get; }</span>
+		}
+	}
+}
+</pre>
+</div> <!-- end type ListenableWorker.Result -->
+<div> <!-- start type Logger -->
+<h3>New Type AndroidX.Work.Logger</h3>
+<pre class='added' data-is-non-breaking>
+public abstract class Logger : Java.Lang.Object, Android.Runtime.IJavaObject, Java.Interop.IJavaPeerable, System.IDisposable {
+	// constructors
+	<span class='added added-constructor ' data-is-non-breaking>public Logger (int loggingLevel);</span>
+	<span class='added added-constructor ' data-is-non-breaking>protected Logger (IntPtr javaReference, Android.Runtime.JniHandleOwnership transfer);</span>
+	// properties
+	<span class='added added-property ' data-is-non-breaking>public override Java.Interop.JniPeerMembers JniPeerMembers { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>protected override IntPtr ThresholdClass { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>protected override System.Type ThresholdType { get; }</span>
+	// methods
+	<span class='added added-method ' data-is-non-breaking>public virtual void Debug (string p0, string p1, Java.Lang.Throwable[] p2);</span>
+	<span class='added added-method ' data-is-non-breaking>public virtual void Error (string p0, string p1, Java.Lang.Throwable[] p2);</span>
+	<span class='added added-method ' data-is-non-breaking>public static Logger Get ();</span>
+	<span class='added added-method ' data-is-non-breaking>public virtual void Info (string p0, string p1, Java.Lang.Throwable[] p2);</span>
+	<span class='added added-method ' data-is-non-breaking>public static void SetLogger (Logger logger);</span>
+	<span class='added added-method ' data-is-non-breaking>public static string TagWithPrefix (string tag);</span>
+	<span class='added added-method ' data-is-non-breaking>public virtual void Verbose (string p0, string p1, Java.Lang.Throwable[] p2);</span>
+	<span class='added added-method ' data-is-non-breaking>public virtual void Warning (string p0, string p1, Java.Lang.Throwable[] p2);</span>
+
+	// inner types
+	public class LogcatLogger : AndroidX.Work.Logger, Android.Runtime.IJavaObject, Java.Interop.IJavaPeerable, System.IDisposable {
+		// constructors
+		<span class='added added-constructor ' data-is-non-breaking>public Logger.LogcatLogger (int loggingLevel);</span>
+		<span class='added added-constructor ' data-is-non-breaking>protected Logger.LogcatLogger (IntPtr javaReference, Android.Runtime.JniHandleOwnership transfer);</span>
+		// properties
+		<span class='added added-property ' data-is-non-breaking>public override Java.Interop.JniPeerMembers JniPeerMembers { get; }</span>
+		<span class='added added-property ' data-is-non-breaking>protected override IntPtr ThresholdClass { get; }</span>
+		<span class='added added-property ' data-is-non-breaking>protected override System.Type ThresholdType { get; }</span>
+		// methods
+		<span class='added added-method ' data-is-non-breaking>public override void Debug (string tag, string message, Java.Lang.Throwable[] throwables);</span>
+		<span class='added added-method ' data-is-non-breaking>public override void Error (string tag, string message, Java.Lang.Throwable[] throwables);</span>
+		<span class='added added-method ' data-is-non-breaking>public override void Info (string tag, string message, Java.Lang.Throwable[] throwables);</span>
+		<span class='added added-method ' data-is-non-breaking>public override void Verbose (string tag, string message, Java.Lang.Throwable[] throwables);</span>
+		<span class='added added-method ' data-is-non-breaking>public override void Warning (string tag, string message, Java.Lang.Throwable[] throwables);</span>
+	}
+}
+</pre>
+</div> <!-- end type Logger -->
+<div> <!-- start type NetworkType -->
+<h3>New Type AndroidX.Work.NetworkType</h3>
+<pre class='added' data-is-non-breaking>
+public sealed class NetworkType : Java.Lang.Enum, Android.Runtime.IJavaObject, Java.IO.ISerializable, Java.Interop.IJavaPeerable, Java.Lang.IComparable, System.IDisposable {
+	// properties
+	<span class='added added-property ' data-is-non-breaking>public static NetworkType Connected { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>public override Java.Interop.JniPeerMembers JniPeerMembers { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>public static NetworkType Metered { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>public static NetworkType NotRequired { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>public static NetworkType NotRoaming { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>protected override IntPtr ThresholdClass { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>protected override System.Type ThresholdType { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>public static NetworkType Unmetered { get; }</span>
+	// methods
+	<span class='added added-method ' data-is-non-breaking>public static NetworkType ValueOf (string name);</span>
+	<span class='added added-method ' data-is-non-breaking>public static NetworkType[] Values ();</span>
+}
+</pre>
+</div> <!-- end type NetworkType -->
+<div> <!-- start type OneTimeWorkRequest -->
+<h3>New Type AndroidX.Work.OneTimeWorkRequest</h3>
+<pre class='added' data-is-non-breaking>
+public sealed class OneTimeWorkRequest : AndroidX.Work.WorkRequest, Android.Runtime.IJavaObject, Java.Interop.IJavaPeerable, System.IDisposable {
+	// properties
+	<span class='added added-property ' data-is-non-breaking>public override Java.Interop.JniPeerMembers JniPeerMembers { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>protected override IntPtr ThresholdClass { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>protected override System.Type ThresholdType { get; }</span>
+	// methods
+	<span class='added added-method ' data-is-non-breaking>public static OneTimeWorkRequest From&lt;TWorker&gt; ();</span>
+	<span class='added added-method ' data-is-non-breaking>public static OneTimeWorkRequest From (Java.Lang.Class workerClass);</span>
+	<span class='added added-method ' data-is-non-breaking>public static System.Collections.Generic.IList&lt;OneTimeWorkRequest&gt; From (System.Collections.Generic.IList&lt;Java.Lang.Class&gt; workerClasses);</span>
+	<span class='added added-method ' data-is-non-breaking>public static OneTimeWorkRequest From (System.Type type);</span>
+
+	// inner types
+	public sealed class Builder : AndroidX.Work.WorkRequest+Builder, Android.Runtime.IJavaObject, Java.Interop.IJavaPeerable, System.IDisposable {
+		// constructors
+		<span class='added added-constructor ' data-is-non-breaking>public OneTimeWorkRequest.Builder (Java.Lang.Class workerClass);</span>
+		<span class='added added-constructor ' data-is-non-breaking>public OneTimeWorkRequest.Builder (System.Type type);</span>
+		// properties
+		<span class='added added-property ' data-is-non-breaking>public override Java.Interop.JniPeerMembers JniPeerMembers { get; }</span>
+		<span class='added added-property ' data-is-non-breaking>protected override IntPtr ThresholdClass { get; }</span>
+		<span class='added added-property ' data-is-non-breaking>protected override System.Type ThresholdType { get; }</span>
+		// methods
+		<span class='added added-method ' data-is-non-breaking>public OneTimeWorkRequest.Builder AddTag (string tag);</span>
+		<span class='added added-method ' data-is-non-breaking>public OneTimeWorkRequest Build ();</span>
+		<span class='added added-method ' data-is-non-breaking>public static OneTimeWorkRequest.Builder From&lt;TWorker&gt; ();</span>
+		<span class='added added-method ' data-is-non-breaking>public OneTimeWorkRequest.Builder KeepResultsForAtLeast (System.TimeSpan duration);</span>
+		<span class='added added-method ' data-is-non-breaking>public OneTimeWorkRequest.Builder KeepResultsForAtLeast (long duration, Java.Util.Concurrent.TimeUnit timeUnit);</span>
+		<span class='added added-method ' data-is-non-breaking>public OneTimeWorkRequest.Builder SetBackoffCriteria (BackoffPolicy policy, System.TimeSpan backoffDelay);</span>
+		<span class='added added-method ' data-is-non-breaking>public OneTimeWorkRequest.Builder SetBackoffCriteria (BackoffPolicy policy, long backoffDelay, Java.Util.Concurrent.TimeUnit timeUnit);</span>
+		<span class='added added-method ' data-is-non-breaking>public OneTimeWorkRequest.Builder SetConstraints (Constraints constraints);</span>
+		<span class='added added-method ' data-is-non-breaking>public OneTimeWorkRequest.Builder SetInitialDelay (long duration, Java.Util.Concurrent.TimeUnit timeUnit);</span>
+		<span class='added added-method ' data-is-non-breaking>public OneTimeWorkRequest.Builder SetInitialRunAttemptCount (int runAttemptCount);</span>
+		<span class='added added-method ' data-is-non-breaking>public OneTimeWorkRequest.Builder SetInitialState (WorkInfo.State state);</span>
+		<span class='added added-method ' data-is-non-breaking>public OneTimeWorkRequest.Builder SetInputData (Data data);</span>
+		<span class='added added-method ' data-is-non-breaking>public OneTimeWorkRequest.Builder SetInputMerger (Java.Lang.Class inputMerger);</span>
+		<span class='added added-method ' data-is-non-breaking>public OneTimeWorkRequest.Builder SetPeriodStartTime (System.TimeSpan periodStartTime);</span>
+		<span class='added added-method ' data-is-non-breaking>public OneTimeWorkRequest.Builder SetPeriodStartTime (long periodStartTime, Java.Util.Concurrent.TimeUnit timeUnit);</span>
+		<span class='added added-method ' data-is-non-breaking>public OneTimeWorkRequest.Builder SetScheduleRequestedAt (System.TimeSpan scheduleRequestedAt);</span>
+		<span class='added added-method ' data-is-non-breaking>public OneTimeWorkRequest.Builder SetScheduleRequestedAt (long scheduleRequestedAt, Java.Util.Concurrent.TimeUnit timeUnit);</span>
+	}
+}
+</pre>
+</div> <!-- end type OneTimeWorkRequest -->
+<div> <!-- start type Operation -->
+<h3>New Type AndroidX.Work.Operation</h3>
+<pre class='added' data-is-non-breaking>
+public abstract class Operation : Java.Lang.Object, Android.Runtime.IJavaObject, Java.Interop.IJavaPeerable, System.IDisposable {
+	// properties
+	<span class='added added-property ' data-is-non-breaking>public static OperationState.IN_PROGRESS InProgress { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>public static OperationState.SUCCESS Success { get; }</span>
+}
+</pre>
+</div> <!-- end type Operation -->
+<div> <!-- start type OperationConsts -->
+<h3>New Type AndroidX.Work.OperationConsts</h3>
+<pre class='added' data-is-non-breaking>
+public abstract class OperationConsts : AndroidX.Work.Operation, Android.Runtime.IJavaObject, Java.Interop.IJavaPeerable, System.IDisposable {
+}
+</pre>
+</div> <!-- end type OperationConsts -->
+<div> <!-- start type OperationState -->
+<h3>New Type AndroidX.Work.OperationState</h3>
+<pre class='added' data-is-non-breaking>
+public abstract class OperationState : Java.Lang.Object, Android.Runtime.IJavaObject, Java.Interop.IJavaPeerable, System.IDisposable {
+	// constructors
+	<span class='added added-constructor ' data-is-non-breaking>protected OperationState (IntPtr javaReference, Android.Runtime.JniHandleOwnership transfer);</span>
+	// properties
+	<span class='added added-property ' data-is-non-breaking>public override Java.Interop.JniPeerMembers JniPeerMembers { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>protected override IntPtr ThresholdClass { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>protected override System.Type ThresholdType { get; }</span>
+
+	// inner types
+	public sealed class FAILURE : AndroidX.Work.OperationState, Android.Runtime.IJavaObject, Java.Interop.IJavaPeerable, System.IDisposable {
+		// constructors
+		<span class='added added-constructor ' data-is-non-breaking>public OperationState.FAILURE (Java.Lang.Throwable exception);</span>
+		// properties
+		<span class='added added-property ' data-is-non-breaking>public override Java.Interop.JniPeerMembers JniPeerMembers { get; }</span>
+		<span class='added added-property ' data-is-non-breaking>protected override IntPtr ThresholdClass { get; }</span>
+		<span class='added added-property ' data-is-non-breaking>protected override System.Type ThresholdType { get; }</span>
+		<span class='added added-property ' data-is-non-breaking>public Java.Lang.Throwable Throwable { get; }</span>
+	}
+	public sealed class IN_PROGRESS : AndroidX.Work.OperationState, Android.Runtime.IJavaObject, Java.Interop.IJavaPeerable, System.IDisposable {
+		// properties
+		<span class='added added-property ' data-is-non-breaking>public override Java.Interop.JniPeerMembers JniPeerMembers { get; }</span>
+		<span class='added added-property ' data-is-non-breaking>protected override IntPtr ThresholdClass { get; }</span>
+		<span class='added added-property ' data-is-non-breaking>protected override System.Type ThresholdType { get; }</span>
+	}
+	public sealed class SUCCESS : AndroidX.Work.OperationState, Android.Runtime.IJavaObject, Java.Interop.IJavaPeerable, System.IDisposable {
+		// properties
+		<span class='added added-property ' data-is-non-breaking>public override Java.Interop.JniPeerMembers JniPeerMembers { get; }</span>
+		<span class='added added-property ' data-is-non-breaking>protected override IntPtr ThresholdClass { get; }</span>
+		<span class='added added-property ' data-is-non-breaking>protected override System.Type ThresholdType { get; }</span>
+	}
+}
+</pre>
+</div> <!-- end type OperationState -->
+<div> <!-- start type OverwritingInputMerger -->
+<h3>New Type AndroidX.Work.OverwritingInputMerger</h3>
+<pre class='added' data-is-non-breaking>
+public sealed class OverwritingInputMerger : AndroidX.Work.InputMerger, Android.Runtime.IJavaObject, Java.Interop.IJavaPeerable, System.IDisposable {
+	// constructors
+	<span class='added added-constructor ' data-is-non-breaking>public OverwritingInputMerger ();</span>
+	// properties
+	<span class='added added-property ' data-is-non-breaking>public override Java.Interop.JniPeerMembers JniPeerMembers { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>protected override IntPtr ThresholdClass { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>protected override System.Type ThresholdType { get; }</span>
+	// methods
+	<span class='added added-method ' data-is-non-breaking>public override Data Merge (System.Collections.Generic.IList&lt;Data&gt; inputs);</span>
+}
+</pre>
+</div> <!-- end type OverwritingInputMerger -->
+<div> <!-- start type PeriodicWorkRequest -->
+<h3>New Type AndroidX.Work.PeriodicWorkRequest</h3>
+<pre class='added' data-is-non-breaking>
+public sealed class PeriodicWorkRequest : AndroidX.Work.WorkRequest, Android.Runtime.IJavaObject, Java.Interop.IJavaPeerable, System.IDisposable {
+	// fields
+	<span class='added added-field ' data-is-non-breaking>public static const long MinPeriodicFlexMillis;</span>
+	<span class='added added-field ' data-is-non-breaking>public static const long MinPeriodicIntervalMillis;</span>
+	// properties
+	<span class='added added-property ' data-is-non-breaking>public override Java.Interop.JniPeerMembers JniPeerMembers { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>protected override IntPtr ThresholdClass { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>protected override System.Type ThresholdType { get; }</span>
+
+	// inner types
+	public sealed class Builder : AndroidX.Work.WorkRequest+Builder, Android.Runtime.IJavaObject, Java.Interop.IJavaPeerable, System.IDisposable {
+		// constructors
+		<span class='added added-constructor ' data-is-non-breaking>public PeriodicWorkRequest.Builder (System.Type type, System.TimeSpan repeatInterval);</span>
+		<span class='added added-constructor ' data-is-non-breaking>public PeriodicWorkRequest.Builder (Java.Lang.Class workerClass, long repeatInterval, Java.Util.Concurrent.TimeUnit repeatIntervalTimeUnit);</span>
+		<span class='added added-constructor ' data-is-non-breaking>public PeriodicWorkRequest.Builder (System.Type type, long repeatInterval, Java.Util.Concurrent.TimeUnit repeatIntervalTimeUnit);</span>
+		<span class='added added-constructor ' data-is-non-breaking>public PeriodicWorkRequest.Builder (System.Type type, System.TimeSpan repeatInterval, System.TimeSpan flexInterval);</span>
+		<span class='added added-constructor ' data-is-non-breaking>public PeriodicWorkRequest.Builder (Java.Lang.Class workerClass, long repeatInterval, Java.Util.Concurrent.TimeUnit repeatIntervalTimeUnit, long flexInterval, Java.Util.Concurrent.TimeUnit flexIntervalTimeUnit);</span>
+		<span class='added added-constructor ' data-is-non-breaking>public PeriodicWorkRequest.Builder (System.Type type, long repeatInterval, Java.Util.Concurrent.TimeUnit repeatIntervalTimeUnit, long flexInterval, Java.Util.Concurrent.TimeUnit flexIntervalTimeUnit);</span>
+		// properties
+		<span class='added added-property ' data-is-non-breaking>public override Java.Interop.JniPeerMembers JniPeerMembers { get; }</span>
+		<span class='added added-property ' data-is-non-breaking>protected override IntPtr ThresholdClass { get; }</span>
+		<span class='added added-property ' data-is-non-breaking>protected override System.Type ThresholdType { get; }</span>
+		// methods
+		<span class='added added-method ' data-is-non-breaking>public PeriodicWorkRequest.Builder AddTag (string tag);</span>
+		<span class='added added-method ' data-is-non-breaking>public PeriodicWorkRequest Build ();</span>
+		<span class='added added-method ' data-is-non-breaking>public static PeriodicWorkRequest.Builder From&lt;TWorker&gt; (System.TimeSpan repeatInterval);</span>
+		<span class='added added-method ' data-is-non-breaking>public static PeriodicWorkRequest.Builder From&lt;TWorker&gt; (long repeatInterval, Java.Util.Concurrent.TimeUnit repeatIntervalTimeUnit);</span>
+		<span class='added added-method ' data-is-non-breaking>public static PeriodicWorkRequest.Builder From&lt;TWorker&gt; (System.TimeSpan repeatInterval, System.TimeSpan flexInterval);</span>
+		<span class='added added-method ' data-is-non-breaking>public static PeriodicWorkRequest.Builder From&lt;TWorker&gt; (long repeatInterval, Java.Util.Concurrent.TimeUnit repeatIntervalTimeUnit, long flexInterval, Java.Util.Concurrent.TimeUnit flexIntervalTimeUnit);</span>
+		<span class='added added-method ' data-is-non-breaking>public PeriodicWorkRequest.Builder KeepResultsForAtLeast (System.TimeSpan duration);</span>
+		<span class='added added-method ' data-is-non-breaking>public PeriodicWorkRequest.Builder KeepResultsForAtLeast (long duration, Java.Util.Concurrent.TimeUnit timeUnit);</span>
+		<span class='added added-method ' data-is-non-breaking>public PeriodicWorkRequest.Builder SetBackoffCriteria (BackoffPolicy policy, System.TimeSpan backoffDelay);</span>
+		<span class='added added-method ' data-is-non-breaking>public PeriodicWorkRequest.Builder SetBackoffCriteria (BackoffPolicy policy, long backoffDelay, Java.Util.Concurrent.TimeUnit timeUnit);</span>
+		<span class='added added-method ' data-is-non-breaking>public PeriodicWorkRequest.Builder SetConstraints (Constraints constraints);</span>
+		<span class='added added-method ' data-is-non-breaking>public PeriodicWorkRequest.Builder SetInitialRunAttemptCount (int runAttemptCount);</span>
+		<span class='added added-method ' data-is-non-breaking>public PeriodicWorkRequest.Builder SetInitialState (WorkInfo.State state);</span>
+		<span class='added added-method ' data-is-non-breaking>public PeriodicWorkRequest.Builder SetInputData (Data data);</span>
+		<span class='added added-method ' data-is-non-breaking>public PeriodicWorkRequest.Builder SetPeriodStartTime (System.TimeSpan periodStartTime);</span>
+		<span class='added added-method ' data-is-non-breaking>public PeriodicWorkRequest.Builder SetPeriodStartTime (long periodStartTime, Java.Util.Concurrent.TimeUnit timeUnit);</span>
+		<span class='added added-method ' data-is-non-breaking>public PeriodicWorkRequest.Builder SetScheduleRequestedAt (System.TimeSpan scheduleRequestedAt);</span>
+		<span class='added added-method ' data-is-non-breaking>public PeriodicWorkRequest.Builder SetScheduleRequestedAt (long scheduleRequestedAt, Java.Util.Concurrent.TimeUnit timeUnit);</span>
+	}
+}
+</pre>
+</div> <!-- end type PeriodicWorkRequest -->
+<div> <!-- start type WorkContinuation -->
+<h3>New Type AndroidX.Work.WorkContinuation</h3>
+<pre class='added' data-is-non-breaking>
+public abstract class WorkContinuation : Java.Lang.Object, Android.Runtime.IJavaObject, Java.Interop.IJavaPeerable, System.IDisposable {
+	// constructors
+	<span class='added added-constructor ' data-is-non-breaking>public WorkContinuation ();</span>
+	<span class='added added-constructor ' data-is-non-breaking>protected WorkContinuation (IntPtr javaReference, Android.Runtime.JniHandleOwnership transfer);</span>
+	// properties
+	<span class='added added-property ' data-is-non-breaking>public override Java.Interop.JniPeerMembers JniPeerMembers { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>protected override IntPtr ThresholdClass { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>protected override System.Type ThresholdType { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>public virtual Android.Arch.Lifecycle.LiveData WorkInfosLiveData { get; }</span>
+	// methods
+	<span class='added added-method ' data-is-non-breaking>public static WorkContinuation Combine (System.Collections.Generic.IList&lt;WorkContinuation&gt; continuations);</span>
+	<span class='added added-method ' data-is-non-breaking>protected virtual WorkContinuation CombineInternal (System.Collections.Generic.IList&lt;WorkContinuation&gt; p0);</span>
+	<span class='added added-method ' data-is-non-breaking>public virtual IOperation Enqueue ();</span>
+	<span class='added added-method ' data-is-non-breaking>public WorkContinuation Then (OneTimeWorkRequest work);</span>
+	<span class='added added-method ' data-is-non-breaking>public virtual WorkContinuation Then (System.Collections.Generic.IList&lt;OneTimeWorkRequest&gt; p0);</span>
+}
+</pre>
+</div> <!-- end type WorkContinuation -->
+<div> <!-- start type WorkInfo -->
+<h3>New Type AndroidX.Work.WorkInfo</h3>
+<pre class='added' data-is-non-breaking>
+public sealed class WorkInfo : Java.Lang.Object, Android.Runtime.IJavaObject, Java.Interop.IJavaPeerable, System.IDisposable {
+	// constructors
+	<span class='added added-constructor ' data-is-non-breaking>public WorkInfo (Java.Util.UUID id, WorkInfo.State state, Data outputData, System.Collections.Generic.IList&lt;string&gt; tags);</span>
+	// properties
+	<span class='added added-property ' data-is-non-breaking>public Java.Util.UUID Id { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>public override Java.Interop.JniPeerMembers JniPeerMembers { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>public Data OutputData { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>public System.Collections.Generic.ICollection&lt;string&gt; Tags { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>protected override IntPtr ThresholdClass { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>protected override System.Type ThresholdType { get; }</span>
+	// methods
+	<span class='added added-method ' data-is-non-breaking>public WorkInfo.State GetState ();</span>
+
+	// inner types
+	public sealed class State : Java.Lang.Enum, Android.Runtime.IJavaObject, Java.IO.ISerializable, Java.Interop.IJavaPeerable, Java.Lang.IComparable, System.IDisposable {
+		// properties
+		<span class='added added-property ' data-is-non-breaking>public static WorkInfo.State Blocked { get; }</span>
+		<span class='added added-property ' data-is-non-breaking>public static WorkInfo.State Cancelled { get; }</span>
+		<span class='added added-property ' data-is-non-breaking>public static WorkInfo.State Enqueued { get; }</span>
+		<span class='added added-property ' data-is-non-breaking>public static WorkInfo.State Failed { get; }</span>
+		<span class='added added-property ' data-is-non-breaking>public bool IsFinished { get; }</span>
+		<span class='added added-property ' data-is-non-breaking>public override Java.Interop.JniPeerMembers JniPeerMembers { get; }</span>
+		<span class='added added-property ' data-is-non-breaking>public static WorkInfo.State Running { get; }</span>
+		<span class='added added-property ' data-is-non-breaking>public static WorkInfo.State Succeeded { get; }</span>
+		<span class='added added-property ' data-is-non-breaking>protected override IntPtr ThresholdClass { get; }</span>
+		<span class='added added-property ' data-is-non-breaking>protected override System.Type ThresholdType { get; }</span>
+		// methods
+		<span class='added added-method ' data-is-non-breaking>public static WorkInfo.State ValueOf (string name);</span>
+		<span class='added added-method ' data-is-non-breaking>public static WorkInfo.State[] Values ();</span>
+	}
+}
+</pre>
+</div> <!-- end type WorkInfo -->
+<div> <!-- start type WorkManager -->
+<h3>New Type AndroidX.Work.WorkManager</h3>
+<pre class='added' data-is-non-breaking>
+public abstract class WorkManager : Java.Lang.Object, Android.Runtime.IJavaObject, Java.Interop.IJavaPeerable, System.IDisposable {
+	// constructors
+	<span class='added added-constructor ' data-is-non-breaking>protected WorkManager ();</span>
+	<span class='added added-constructor ' data-is-non-breaking>protected WorkManager (IntPtr javaReference, Android.Runtime.JniHandleOwnership transfer);</span>
+	// properties
+	<span class='added added-property ' data-is-non-breaking>public static WorkManager Instance { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>public override Java.Interop.JniPeerMembers JniPeerMembers { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>public virtual Android.Arch.Lifecycle.LiveData LastCancelAllTimeMillisLiveData { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>protected override IntPtr ThresholdClass { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>protected override System.Type ThresholdType { get; }</span>
+	// methods
+	<span class='added added-method ' data-is-non-breaking>public WorkContinuation BeginUniqueWork (string uniqueWorkName, ExistingWorkPolicy existingWorkPolicy, OneTimeWorkRequest work);</span>
+	<span class='added added-method ' data-is-non-breaking>public virtual WorkContinuation BeginUniqueWork (string p0, ExistingWorkPolicy p1, System.Collections.Generic.IList&lt;OneTimeWorkRequest&gt; p2);</span>
+	<span class='added added-method ' data-is-non-breaking>public WorkContinuation BeginWith (OneTimeWorkRequest work);</span>
+	<span class='added added-method ' data-is-non-breaking>public virtual WorkContinuation BeginWith (System.Collections.Generic.IList&lt;OneTimeWorkRequest&gt; p0);</span>
+	<span class='added added-method ' data-is-non-breaking>public virtual IOperation CancelAllWork ();</span>
+	<span class='added added-method ' data-is-non-breaking>public virtual IOperation CancelAllWorkByTag (string p0);</span>
+	<span class='added added-method ' data-is-non-breaking>public virtual IOperation CancelUniqueWork (string p0);</span>
+	<span class='added added-method ' data-is-non-breaking>public virtual IOperation CancelWorkById (Java.Util.UUID p0);</span>
+	<span class='added added-method ' data-is-non-breaking>public IOperation Enqueue (WorkRequest workRequest);</span>
+	<span class='added added-method ' data-is-non-breaking>public virtual IOperation Enqueue (System.Collections.Generic.IList&lt;WorkRequest&gt; p0);</span>
+	<span class='added added-method ' data-is-non-breaking>public virtual IOperation EnqueueUniquePeriodicWork (string p0, ExistingPeriodicWorkPolicy p1, PeriodicWorkRequest p2);</span>
+	<span class='added added-method ' data-is-non-breaking>public virtual IOperation EnqueueUniqueWork (string uniqueWorkName, ExistingWorkPolicy existingWorkPolicy, OneTimeWorkRequest work);</span>
+	<span class='added added-method ' data-is-non-breaking>public virtual IOperation EnqueueUniqueWork (string p0, ExistingWorkPolicy p1, System.Collections.Generic.IList&lt;OneTimeWorkRequest&gt; p2);</span>
+	<span class='added added-method ' data-is-non-breaking>public virtual Android.Arch.Lifecycle.LiveData GetWorkInfoByIdLiveData (Java.Util.UUID p0);</span>
+	<span class='added added-method ' data-is-non-breaking>public virtual Android.Arch.Lifecycle.LiveData GetWorkInfosByTagLiveData (string p0);</span>
+	<span class='added added-method ' data-is-non-breaking>public virtual Android.Arch.Lifecycle.LiveData GetWorkInfosForUniqueWorkLiveData (string p0);</span>
+	<span class='added added-method ' data-is-non-breaking>public static void Initialize (Android.Content.Context context, Configuration configuration);</span>
+	<span class='added added-method ' data-is-non-breaking>public virtual IOperation PruneWork ();</span>
+}
+</pre>
+</div> <!-- end type WorkManager -->
+<div> <!-- start type WorkRequest -->
+<h3>New Type AndroidX.Work.WorkRequest</h3>
+<pre class='added' data-is-non-breaking>
+public abstract class WorkRequest : Java.Lang.Object, Android.Runtime.IJavaObject, Java.Interop.IJavaPeerable, System.IDisposable {
+	// constructors
+	<span class='added added-constructor ' data-is-non-breaking>protected WorkRequest (IntPtr javaReference, Android.Runtime.JniHandleOwnership transfer);</span>
+	// fields
+	<span class='added added-field ' data-is-non-breaking>public static const long DefaultBackoffDelayMillis;</span>
+	<span class='added added-field ' data-is-non-breaking>public static const long MaxBackoffMillis;</span>
+	<span class='added added-field ' data-is-non-breaking>public static const long MinBackoffMillis;</span>
+	// properties
+	<span class='added added-property ' data-is-non-breaking>public virtual Java.Util.UUID Id { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>public override Java.Interop.JniPeerMembers JniPeerMembers { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>public virtual string StringId { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>public virtual System.Collections.Generic.ICollection&lt;string&gt; Tags { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>protected override IntPtr ThresholdClass { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>protected override System.Type ThresholdType { get; }</span>
+
+	// inner types
+	public abstract class Builder : Java.Lang.Object, Android.Runtime.IJavaObject, Java.Interop.IJavaPeerable, System.IDisposable {
+		// constructors
+		<span class='added added-constructor ' data-is-non-breaking>protected WorkRequest.Builder (IntPtr javaReference, Android.Runtime.JniHandleOwnership transfer);</span>
+		// properties
+		<span class='added added-property ' data-is-non-breaking>public override Java.Interop.JniPeerMembers JniPeerMembers { get; }</span>
+		<span class='added added-property ' data-is-non-breaking>protected override IntPtr ThresholdClass { get; }</span>
+		<span class='added added-property ' data-is-non-breaking>protected override System.Type ThresholdType { get; }</span>
+		// methods
+		<span class='added added-method ' data-is-non-breaking>public WorkRequest.Builder AddTag (string tag);</span>
+		<span class='added added-method ' data-is-non-breaking>public WorkRequest Build ();</span>
+		<span class='added added-method ' data-is-non-breaking>public WorkRequest.Builder KeepResultsForAtLeast (long duration, Java.Util.Concurrent.TimeUnit timeUnit);</span>
+		<span class='added added-method ' data-is-non-breaking>public WorkRequest.Builder SetBackoffCriteria (BackoffPolicy backoffPolicy, long backoffDelay, Java.Util.Concurrent.TimeUnit timeUnit);</span>
+		<span class='added added-method ' data-is-non-breaking>public WorkRequest.Builder SetConstraints (Constraints constraints);</span>
+		<span class='added added-method ' data-is-non-breaking>public WorkRequest.Builder SetInitialRunAttemptCount (int runAttemptCount);</span>
+		<span class='added added-method ' data-is-non-breaking>public WorkRequest.Builder SetInitialState (WorkInfo.State state);</span>
+		<span class='added added-method ' data-is-non-breaking>public WorkRequest.Builder SetInputData (Data inputData);</span>
+		<span class='added added-method ' data-is-non-breaking>public WorkRequest.Builder SetPeriodStartTime (long periodStartTime, Java.Util.Concurrent.TimeUnit timeUnit);</span>
+		<span class='added added-method ' data-is-non-breaking>public WorkRequest.Builder SetScheduleRequestedAt (long scheduleRequestedAt, Java.Util.Concurrent.TimeUnit timeUnit);</span>
+	}
+}
+</pre>
+</div> <!-- end type WorkRequest -->
+<div> <!-- start type Worker -->
+<h3>New Type AndroidX.Work.Worker</h3>
+<pre class='added' data-is-non-breaking>
+public abstract class Worker : AndroidX.Work.ListenableWorker, Android.Runtime.IJavaObject, Java.Interop.IJavaPeerable, System.IDisposable {
+	// constructors
+	<span class='added added-constructor ' data-is-non-breaking>public Worker (Android.Content.Context context, WorkerParameters workerParams);</span>
+	<span class='added added-constructor ' data-is-non-breaking>protected Worker (IntPtr javaReference, Android.Runtime.JniHandleOwnership transfer);</span>
+	// properties
+	<span class='added added-property ' data-is-non-breaking>public override Java.Interop.JniPeerMembers JniPeerMembers { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>protected override IntPtr ThresholdClass { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>protected override System.Type ThresholdType { get; }</span>
+	// methods
+	<span class='added added-method ' data-is-non-breaking>public virtual ListenableWorker.Result DoWork ();</span>
+}
+</pre>
+</div> <!-- end type Worker -->
+<div> <!-- start type WorkerFactory -->
+<h3>New Type AndroidX.Work.WorkerFactory</h3>
+<pre class='added' data-is-non-breaking>
+public abstract class WorkerFactory : Java.Lang.Object, Android.Runtime.IJavaObject, Java.Interop.IJavaPeerable, System.IDisposable {
+	// constructors
+	<span class='added added-constructor ' data-is-non-breaking>public WorkerFactory ();</span>
+	<span class='added added-constructor ' data-is-non-breaking>protected WorkerFactory (IntPtr javaReference, Android.Runtime.JniHandleOwnership transfer);</span>
+	// properties
+	<span class='added added-property ' data-is-non-breaking>public static WorkerFactory DefaultWorkerFactory { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>public override Java.Interop.JniPeerMembers JniPeerMembers { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>protected override IntPtr ThresholdClass { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>protected override System.Type ThresholdType { get; }</span>
+	// methods
+	<span class='added added-method ' data-is-non-breaking>public virtual ListenableWorker CreateWorker (Android.Content.Context p0, string p1, WorkerParameters p2);</span>
+	<span class='added added-method ' data-is-non-breaking>public ListenableWorker CreateWorkerWithDefaultFallback (Android.Content.Context appContext, string workerClassName, WorkerParameters workerParameters);</span>
+}
+</pre>
+</div> <!-- end type WorkerFactory -->
+<div> <!-- start type WorkerParameters -->
+<h3>New Type AndroidX.Work.WorkerParameters</h3>
+<pre class='added' data-is-non-breaking>
+public sealed class WorkerParameters : Java.Lang.Object, Android.Runtime.IJavaObject, Java.Interop.IJavaPeerable, System.IDisposable {
+	// properties
+	<span class='added added-property ' data-is-non-breaking>public Java.Util.Concurrent.IExecutor BackgroundExecutor { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>public Java.Util.UUID Id { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>public Data InputData { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>public override Java.Interop.JniPeerMembers JniPeerMembers { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>public Android.Net.Network Network { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>public int RunAttemptCount { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>public System.Collections.Generic.ICollection&lt;string&gt; Tags { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>protected override IntPtr ThresholdClass { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>protected override System.Type ThresholdType { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>public System.Collections.Generic.IList&lt;string&gt; TriggeredContentAuthorities { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>public System.Collections.Generic.IList&lt;Android.Net.Uri&gt; TriggeredContentUris { get; }</span>
+	<span class='added added-property ' data-is-non-breaking>public WorkerFactory WorkerFactory { get; }</span>
+
+	// inner types
+	public class RuntimeExtras : Java.Lang.Object, Android.Runtime.IJavaObject, Java.Interop.IJavaPeerable, System.IDisposable {
+		// constructors
+		<span class='added added-constructor ' data-is-non-breaking>public WorkerParameters.RuntimeExtras ();</span>
+		<span class='added added-constructor ' data-is-non-breaking>protected WorkerParameters.RuntimeExtras (IntPtr javaReference, Android.Runtime.JniHandleOwnership transfer);</span>
+		// properties
+		<span class='added added-property ' data-is-non-breaking>public override Java.Interop.JniPeerMembers JniPeerMembers { get; }</span>
+		<span class='added added-property ' data-is-non-breaking>public Android.Net.Network Network { get; set; }</span>
+		<span class='added added-property ' data-is-non-breaking>protected override IntPtr ThresholdClass { get; }</span>
+		<span class='added added-property ' data-is-non-breaking>protected override System.Type ThresholdType { get; }</span>
+		<span class='added added-property ' data-is-non-breaking>public System.Collections.IList TriggeredContentAuthorities { get; set; }</span>
+		<span class='added added-property ' data-is-non-breaking>public System.Collections.IList TriggeredContentUris { get; set; }</span>
+	}
+}
+</pre>
+</div> <!-- end type WorkerParameters -->
+</div> <!-- end namespace AndroidX.Work -->
 <!-- start namespace Org.Chromium.SupportLibBoundary --> <div>
 <h2>New Namespace Org.Chromium.SupportLibBoundary</h2>
 <div> <!-- start type IFeatureFlagHolderBoundaryInterface -->

@@ -1,5 +1,9 @@
 # Analysis Report
 
+## Bindings Analysis
+
+### Unmanaged 
+
 *   TAR - types Android registered
 
     *   N = 2733
@@ -22,7 +26,7 @@
 
 *   TNAR - types nested Android registered
 
-    *   N = $NTNAR$
+    *   N = 1525
 
     *   [./AndroidX.merged.dll.TNAR.csv](./AndroidX.merged.dll.TNAR.csv)
     
@@ -37,7 +41,16 @@
     *   N = 503
 
     *   [./AndroidX.merged.dll.TR.csv](./AndroidX.merged.dll.TR.csv)
+    
+## Managed 
 
+*   MappingsForMigrationMergeJoin
+
+    *   N = 2518
+
+    *   [./AndroidX.merged.dll.MappingsForMigrationMergeJoin.csv](./AndroidX.merged.dll.MappingsForMigrationMergeJoin.csv)
+        
+    
 ## Google Mappings
 
 GoogleMapping = 1936;
