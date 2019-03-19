@@ -30,19 +30,19 @@
 
     *   [./Android.Support.merged.dll.TNAR.csv](./Android.Support.merged.dll.TNAR.csv)
     
-    *   check: N = 375 = `TNARIG.Count()` + `TNARNIG.Count()` = 291 + 84 = $SUM_TNAR$
+    *   check: N = 375 = `TNARIG.Count()` + `TNARNIG.Count()` = 291 + 84 = 375
 
 *   TNARIG - types nested Android registered in Google\'s mappings
 
     *   N = 291
 
-    *   [./Android.Support.merged.dll.TNAR.csv](./Android.Support.merged.dll.TNARIG.csv)
+    *   [./Android.Support.merged.dll.TNARIG.csv](./Android.Support.merged.dll.TNARIG.csv)
     
 *   TNARNIG - types nested Android registered NOT in Google\'s mappings
 
     *   N = 84
 
-    *   [./Android.Support.merged.dll.TNAR.csv](./Android.Support.merged.dll.TNARNIG.csv)
+    *   [./Android.Support.merged.dll.TNARNIG.csv](./Android.Support.merged.dll.TNARNIG.csv)
     
 *   TAUR - types Android unregistered 
         
