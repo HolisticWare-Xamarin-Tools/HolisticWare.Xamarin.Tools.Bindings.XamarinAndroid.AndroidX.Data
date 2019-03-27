@@ -6,23 +6,23 @@
 
 *   TAR - types Android registered
 
-    *   N = 2891
+    *   N = 2827
 
-    *   [./AndroidX.Merged.dll.TAR.csv](./AndroidX.Merged.dll.TAR.csv)
+    *   [./AndroidSupport.Merged.dll.TAR.csv](./AndroidSupport.Merged.dll.TAR.csv)
     
-    *   check: N = 2891 = `TARIG.Count()` + `TARNIG.Count()` = 1283 + 1608 = 2891
+    *   check: N = 2827 = `TARIG.Count()` + `TARNIG.Count()` = 1251 + 1576 = 2827
 
 *   TARIG - types Android registered found in Google's Mappings
 
-    *   N = 1283
+    *   N = 1251
 
-    *   [./AndroidX.Merged.dll.TARIG.csv](./AndroidX.Merged.dll.TARIG.csv)
+    *   [./AndroidSupport.Merged.dll.TARIG.csv](./AndroidSupport.Merged.dll.TARIG.csv)
 
 *   TARNIG - types Android registered NOT found in Google's Mappings
 
-    *   N = 1608
+    *   N = 1576
 
-    *   [./AndroidX.Merged.dll.TARNIG.csv](./AndroidX.Merged.dll.TARNIG.csv)
+    *   [./AndroidSupport.Merged.dll.TARNIG.csv](./AndroidSupport.Merged.dll.TARNIG.csv)
 
 *   TARNIGF - types Android registered NOT found in Google's Mappings FIXED 
 
@@ -30,27 +30,27 @@
 
     *   N = $NTARNIGF$
 
-    *   [./AndroidX.Merged.dll.TARNIGF.csv](./AndroidX.Merged.dll.TARNIGF.csv)
+    *   [./AndroidSupport.Merged.dll.TARNIGF.csv](./AndroidSupport.Merged.dll.TARNIGF.csv)
 
 *   TNAR - types nested Android registered
 
-    *   N = 384
+    *   N = 375
 
-    *   [./AndroidX.Merged.dll.TNAR.csv](./AndroidX.Merged.dll.TNAR.csv)
+    *   [./AndroidSupport.Merged.dll.TNAR.csv](./AndroidSupport.Merged.dll.TNAR.csv)
     
-    *   check: N = 384 = `TNARIG.Count()` + `TNARNIG.Count()` = 299 + 85 = 384
+    *   check: N = 375 = `TNARIG.Count()` + `TNARNIG.Count()` = 291 + 84 = 375
 
 *   TNARIG - types nested Android registered in Google\'s mappings
 
-    *   N = 299
+    *   N = 291
 
-    *   [./AndroidX.Merged.dll.TNARIG.csv](./AndroidX.Merged.dll.TNARIG.csv)
+    *   [./AndroidSupport.Merged.dll.TNARIG.csv](./AndroidSupport.Merged.dll.TNARIG.csv)
     
 *   TNARNIG - types nested Android registered NOT in Google's mappings
 
-    *   N = 85
+    *   N = 84
 
-    *   [./AndroidX.Merged.dll.TNARNIG.csv](./AndroidX.Merged.dll.TNARNIG.csv)
+    *   [./AndroidSupport.Merged.dll.TNARNIG.csv](./AndroidSupport.Merged.dll.TNARNIG.csv)
     
 *   TNARNIGF - types nested Android registered NOT in Google's mappings FIXED
 
@@ -58,27 +58,27 @@
     
     *   N = $NTNARNIGF$
 
-    *   [./AndroidX.Merged.dll.TNARNIGF.csv](./AndroidX.Merged.dll.TNARNIGF.csv)
+    *   [./AndroidSupport.Merged.dll.TNARNIGF.csv](./AndroidSupport.Merged.dll.TNARNIGF.csv)
     
 *   TAUR - types Android unregistered 
         
     *   N = 0
 
-    *   [./AndroidX.Merged.dll.TAUR.csv](./AndroidX.Merged.dll.TAUR.csv)
+    *   [./AndroidSupport.Merged.dll.TAUR.csv](./AndroidSupport.Merged.dll.TAUR.csv)
     
 *   TR - type references
 
-    *   N = 509
+    *   N = 508
 
-    *   [./AndroidX.Merged.dll.TR.csv](./AndroidX.Merged.dll.TR.csv)
+    *   [./AndroidSupport.Merged.dll.TR.csv](./AndroidSupport.Merged.dll.TR.csv)
     
 ## Managed 
 
 *   MappingsForMigrationMergeJoin
 
-    *   N = 3275
+    *   N = 3202
 
-    *   [./AndroidX.Merged.dll.MappingsForMigrationMergeJoin.csv](./AndroidX.Merged.dll.MappingsForMigrationMergeJoin.csv)
+    *   [./AndroidSupport.Merged.dll.MappingsForMigrationMergeJoin.csv](./AndroidSupport.Merged.dll.MappingsForMigrationMergeJoin.csv)
         
     
 ## Google Mappings
