@@ -1231,7 +1231,6 @@ android.support.wear.widget.SimpleAnimatorListener,Android.Support.Wear.Widget.S
 android.support.wear.widget.SwipeDismissFrameLayout,Android.Support.Wear.Widget.SwipeDismissFrameLayout
 android.support.wear.widget.SwipeDismissLayout,Android.Support.Wear.Widget.SwipeDismissLayout
 android.support.wear.widget.WearableLinearLayoutManager,Android.Support.Wear.Widget.WearableLinearLayoutManager
-android.support.wear.widget.WearableRecyclerView,Android.Support.Wear.Widget.WearableRecyclerView
 android.support.wear.widget.drawer.PageIndicatorView,Android.Support.Wear.Widget.Drawer.PageIndicatorView
 android.support.wear.widget.drawer.WearableActionDrawerView,Android.Support.Wear.Widget.Drawer.WearableActionDrawerView
 android.support.wear.widget.drawer.WearableDrawerController,Android.Support.Wear.Widget.Drawer.WearableDrawerController

@@ -1461,6 +1461,7 @@ android.support.wear.widget.SwipeDismissFrameLayout$Callback,Android.Support.Wea
 android.support.wear.widget.SwipeDismissFrameLayout$Callback,Android.Support.Wear.Widget.SwipeDismissFrameLayout.CallbackInvoker
 android.support.wear.widget.WearableLinearLayoutManager$LayoutCallback,Android.Support.Wear.Widget.WearableLinearLayoutManager.LayoutCallback
 android.support.wear.widget.WearableLinearLayoutManager$LayoutCallback,Android.Support.Wear.Widget.WearableLinearLayoutManager.LayoutCallbackInvoker
+android.support.wear.widget.WearableRecyclerView,Android.Support.Wear.Widget.WearableRecyclerView
 android.support.wear.widget.drawer.WearableDrawerLayout$DrawerStateCallback,Android.Support.Wear.Widget.Drawer.WearableDrawerLayout.DrawerStateCallback
 android.support.wear.widget.drawer.WearableDrawerView$DrawerState,Android.Support.Wear.Widget.Drawer.WearableDrawerView.IDrawerState
 android.support.wear.widget.drawer.WearableDrawerView$DrawerState,Android.Support.Wear.Widget.Drawer.WearableDrawerView.IDrawerStateInvoker
