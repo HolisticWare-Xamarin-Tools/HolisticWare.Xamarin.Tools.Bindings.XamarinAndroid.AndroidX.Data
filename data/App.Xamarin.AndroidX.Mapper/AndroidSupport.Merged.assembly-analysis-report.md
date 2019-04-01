@@ -10,17 +10,17 @@
 
     *   [./AndroidSupport.Merged.dll.TAR.csv](./AndroidSupport.Merged.dll.TAR.csv)
     
-    *   check: N = 2827 = `TARIG.Count()` + `TARNIG.Count()` = 1252 + 1575 = 2827
+    *   check: N = 2827 = `TARIG.Count()` + `TARNIG.Count()` = 1251 + 1576 = 2827
 
 *   TARIG - types Android registered found in Google's Mappings
 
-    *   N = 1252
+    *   N = 1251
 
     *   [./AndroidSupport.Merged.dll.TARIG.csv](./AndroidSupport.Merged.dll.TARIG.csv)
 
 *   TARNIG - types Android registered NOT found in Google's Mappings
 
-    *   N = 1575
+    *   N = 1576
 
     *   [./AndroidSupport.Merged.dll.TARNIG.csv](./AndroidSupport.Merged.dll.TARNIG.csv)
 
@@ -83,16 +83,16 @@
     
 ## Google Mappings
 
-GoogleMapping = 1937;
+GoogleMapping = 1936;
 
 ### Size Reduction
 
-(android.arch.paging, 1915)
-(android.arch.persistence.db, 1903)
-(android.arch.persistence.db.framework, 1903)
-(android.arch.persistence.room, 1694)
-(android.databinding, 1614)
-(android.support.test, 1264)
+(android.arch.paging, 1914)
+(android.arch.persistence.db, 1902)
+(android.arch.persistence.db.framework, 1902)
+(android.arch.persistence.room, 1693)
+(android.databinding, 1613)
+(android.support.test, 1263)
 
 
 ## Artifacts for downloads

@@ -83,16 +83,16 @@
     
 ## Google Mappings
 
-GoogleMapping = 1937;
+GoogleMapping = 1936;
 
 ### Size Reduction
 
-(android.arch.paging, 1915)
-(android.arch.persistence.db, 1903)
-(android.arch.persistence.db.framework, 1903)
-(android.arch.persistence.room, 1694)
-(android.databinding, 1614)
-(android.support.test, 1264)
+(android.arch.paging, 1914)
+(android.arch.persistence.db, 1902)
+(android.arch.persistence.db.framework, 1902)
+(android.arch.persistence.room, 1693)
+(android.databinding, 1613)
+(android.support.test, 1263)
 
 
 ## Artifacts for downloads
